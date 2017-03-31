@@ -15,8 +15,8 @@ If you'd like to contribute, check out the currently open issues. Generally thos
 
 You will need to have the following installed on your machine before continuing:
 
-- Node >= 6, [installation instructions]()
-- NPM >= 3, [installation instructions]()
+- Node >= 6, [installation instructions](https://docs.npmjs.com/getting-started/installing-node)
+- NPM >= 3, [installation instructions](http://blog.npmjs.org/post/85484771375/how-to-install-npm)
 
 Next, you'll want to `cd` into the project's root and install our node dependencies:
 
@@ -24,6 +24,17 @@ Next, you'll want to `cd` into the project's root and install our node dependenc
 cd iwanttocontribute
 npm install
 ```
+
+The last requirement is that you have a Github access token created. This is required because the Github API allows us a much larger rate limit when accessing their API with an authenticated access token. To create your access token, follow the `Creating a Token` part of [this guide](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/#creating-a-token). Give it whatever descriptive name you want, and as far as permissions go, don't give it any additional permissions (ie. don't check the checkboxes). There's no need. This token only needs public access level.
+
+From here, the token (a long string of characters) should be displayed to you. Copy the token, create a file named `.env` in this project's root and add this line to it:
+
+```
+REACT_APP_GITHUB_TOKEN=<Your Github Token>
+
+```
+
+(make sure you replace `<Your Github Token>` with the token you copied). Save that file, and make sure you DON'T commit it to git! This is your personal secret Github token. 
 
 Voila! Your dev environment is all set up! You can now run `npm start` to spin up your development server, which will redirect you to the app in your browser.
 
