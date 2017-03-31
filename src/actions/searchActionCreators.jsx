@@ -1,18 +1,24 @@
+import * as resultsActions from './resultsActionCreators';
 import { searchGithub, getContributing } from '../utils/githubHelper';
 
+/*
+ * The action creators in the file will modify all of the parts of the redux state
+ * that are within state.search. It will also include some super action creators
+ * that will dispatch other action creators.
+ */
 export function submitSearch(value) {
   return function (dispatch) {
     if(value !== "") {
-      dispatch(fetchingStarted());
+      dispatch(resultsActions.fetchingStarted());
       setTimeout(() => {
         dispatch(updateSubmittedSearchTerm(value));
         dispatch(updateSubmitted());
         searchGithub(value)
           .then(function(response) {
-            dispatch(updateResults(response.data));
+            dispatch(resultsActions.updateResults(response.data));
           })
           .then(function(res) {
-            dispatch(fetchingFinished());
+            dispatch(resultsActions.fetchingFinished());
           });
       }, 1000);
     }
@@ -21,44 +27,14 @@ export function submitSearch(value) {
 
 export function getAdditionalInfo(id, repoName) {
   return function (dispatch) {
-    dispatch(fetchingAddionalInfoStarted(id));
+    dispatch(resultsActions.fetchingAddionalInfoStarted(id));
     setTimeout(() => {
       getContributing(repoName)
-        .then((response) => dispatch(updateResult(id, response.data)))
-        .then((res) => dispatch(fetchingAddionalInfoFinished(id)));
+        .then((response) => dispatch(resultsActions.updateResult(id, response.data)))
+        .then((res) => dispatch(resultsActions.fetchingAddionalInfoFinished(id)));
     }, 1000);
   };
 };
-
-function fetchingStarted() {
-  return {
-    type: "FETCHING_UPDATE",
-    payload: true
-  }
-}
-
-function fetchingFinished() {
-  return {
-    type: "FETCHING_UPDATE",
-    payload: false
-  }
-}
-
-function fetchingAddionalInfoStarted(id) {
-  return {
-    type: "RESULT_FETCHING_ADDITIONAL_INFO_UPDATE",
-    id,
-    payload: true
-  }
-}
-
-function fetchingAddionalInfoFinished(id) {
-  return {
-    type: "RESULT_FETCHING_ADDITIONAL_INFO_UPDATE",
-    id,
-    payload: false
-  }
-}
 
 function updateSubmitted() {
   return {
@@ -66,27 +42,6 @@ function updateSubmitted() {
     payload: true
   }
 }
-
-function updateResults(data) {
-  const items = data.items;
-  let result = {};
-  for (var i=0; i<items.length; i++) {
-    result[items[i].id] = items[i];
-  }
-  return {
-    type: "RESULTS_DATA_UPDATE",
-    payload: result
-  }
-}
-
-function updateResult(id, data) {
-  return {
-    type: "RESULT_UPDATE",
-    id,
-    payload: data
-  }
-}
-
 function updateSubmittedSearchTerm(term) {
   return {
     type: "SUBMITTED_SEARCH_TERM_UPDATE",
