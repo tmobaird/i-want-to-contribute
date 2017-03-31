@@ -3,7 +3,8 @@ import axios from 'axios';
 const githubAxios = axios.create({
   baseURL: 'https://api.github.com',
   headers: {
-    Accept: 'application/vnd.github.v3+json'
+    Accept: 'application/vnd.github.v3+json',
+    Authorization: `token ${process.env.REACT_APP_GITHUB_TOKEN}`
   }
 });
 
