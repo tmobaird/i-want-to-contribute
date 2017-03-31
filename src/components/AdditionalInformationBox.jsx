@@ -1,18 +1,13 @@
 import React from 'react';
-import { Row, Panel, Col, Button, Well, Collapse } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
 import Loader from 'halogen/ClipLoader';
 
 import Remarkable from 'remarkable';
 
 const md = new Remarkable();
 
-//console.log(md.render('# Remarkable rulezz!'));
-
 export default class AdditionalInformationBox extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
+  
   getContent() {
     if(this.props.fetching) {
       return (
@@ -51,7 +46,7 @@ export default class AdditionalInformationBox extends React.Component {
     const content = this.getContent();
 
     return (
-      <div>
+      <div className="AdditionalInformationBox">
         { content }
       </div>
     );

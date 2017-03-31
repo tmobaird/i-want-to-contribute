@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import { Row, Panel, Col, Label } from 'react-bootstrap';
 import BsSpecialLabel from './BsSpecialLabel';
 import '../styles/information-label.css';
 
@@ -9,9 +8,6 @@ const quickInfoPropTypes = {
 
 export default class InformationLabel extends React.Component {
   static propTypes = quickInfoPropTypes;
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     if(this.props.data != null) {

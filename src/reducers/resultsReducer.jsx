@@ -2,8 +2,6 @@ import initialState from './initialState';
 import objectAssign from 'object-assign';
 
 export default function resultsReducer(state = initialState.results, action) {
-  let newState;
-
   switch (action.type) {
     case "RESULT_UPDATE":
       const updatedResult = objectAssign({}, state.data[action.id], { additionalInformation: action.payload });

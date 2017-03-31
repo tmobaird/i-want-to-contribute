@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Panel, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import InformationLabel from './InformationLabel';
 import '../styles/result-stats-row.css';
 
@@ -17,9 +17,6 @@ const languageColors = {
 };
 
 export default class ResultStatsRow extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     const data = this.props.data;

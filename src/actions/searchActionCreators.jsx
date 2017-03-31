@@ -2,7 +2,7 @@ import { searchGithub, getContributing } from '../utils/githubHelper';
 
 export function submitSearch(value) {
   return function (dispatch) {
-    if(value != "") {
+    if(value !== "") {
       dispatch(fetchingStarted());
       setTimeout(() => {
         dispatch(updateSubmittedSearchTerm(value));

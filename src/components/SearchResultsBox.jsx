@@ -3,9 +3,6 @@ import SearchResultsList from './SearchResultsList';
 import Loader from 'halogen/RingLoader';
 
 export default class SearchResultsBox extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   getContent() {
     if(this.props.fetchingInProgress) {

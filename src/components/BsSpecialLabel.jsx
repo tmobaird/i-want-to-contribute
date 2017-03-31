@@ -7,12 +7,9 @@ const bsSpecialLabelDefaultProps = {
 
 export default class BsSpecialLabel extends React.Component {
   static defaultProps = bsSpecialLabelDefaultProps;
-  constructor(props) {
-    super(props);
-  }
 
   getLabelClass() {
-    return this.props.level ? ` label-${this.props.level}` : '';
+    return this.props.level;
   };
 
   getStyles() {
@@ -24,9 +21,9 @@ export default class BsSpecialLabel extends React.Component {
 
   render() {
     return (
-      <div className={`label${this.getLabelClass()}`} style={this.getStyles()}>
+      <Label bsStyle={this.getLabelClass()} style={this.getStyles()}>
         {this.props.children}
-      </div>
+      </Label>
     );
   }
 }

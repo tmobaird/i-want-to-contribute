@@ -7,10 +7,6 @@ import { Col } from 'react-bootstrap';
 import * as actions from '../actions/searchActionCreators';
 
 export class SearchPage extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
         <Col xs={12} md={8} mdOffset={2}>

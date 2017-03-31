@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 import { Link, IndexLink } from 'react-router';
-import helloWorld from '../test';
 import '../styles/App.css';
 
 class App extends Component {
