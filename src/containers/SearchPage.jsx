@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-// import SearchBar from '../components/SearchBar';
+import SearchBar from '../components/SearchBar';
 // import SearchResultsBox from '../components/SearchResultsBox';
-import { Col } from 'react-bootstrap';
+import { Col, Label, Panel } from 'react-bootstrap';
 // import * as actions from '../actions/searchActionCreators';
 
 export class SearchPage extends React.Component {
@@ -15,11 +15,9 @@ export class SearchPage extends React.Component {
     return (
         <Col xs={12} md={8} mdOffset={2}>
           <h1 className="text-center">I want to contribute to...</h1>
-          {/* <SearchBar
-            value={this.props.search.value}
-            onChange={this.props.actions.updateSearchValue}
-            onSubmit={this.props.actions.submitSearch}
-          /> */}
+          <SearchBar />
+
+          {/* <SearchBar onSubmit={this.props.actions.submitSearch} /> */}
           <hr />
           {/* <SearchResultsBox
             show={this.props.search.submitted}

@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "0.15.3",
+    "bootstrap": "^3.3.7",
     "halogen": "0.2.0",
     "object-assign": "4.1.0",
     "react": "^15.4.2",

@@ -1,5 +1,17 @@
 .App {
-  text-align: center;
+  /*background: linear-gradient(140deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;*/
+  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.4em;
+  color: #4d4d4d;
+  min-width: 230px;
+  margin: 0 auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-weight: 300;
 }
 
 .App-logo {
@@ -22,3 +34,20 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+/* Variables */
+/*$vin-blue: #5bb7db;
+$vin-green: #60b044;
+$vin-red: #ff0000;*/
+
+/*// h1 {
+//   color: #F6F6F6;
+// }*/
+
+h2 {
+	color: #5bb7db;
+}
+
+/*// h4 {
+//   color: #F6F6F6;
+// }*/

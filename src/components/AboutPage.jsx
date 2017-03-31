@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router';
-//import '../styles/about-page.css';
 
 // Since this component is simple and static, there's no parent container for it.
 const AboutPage = () => {
@@ -8,7 +7,7 @@ const AboutPage = () => {
     <div>
       <h2 className="alt-header">About</h2>
       <p>
-        This example app is part of the <a href="https://github.com/coryhouse/react-slingshot">React-Slingshot
+        This example app is part of the <a href="https://github.com/facebookincubator/create-react-app">create-react-app
         starter kit</a>.
       </p>
       <p>This is an example edit that Thomas made. Badaboom.</p>
