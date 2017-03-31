@@ -18,7 +18,8 @@
     "remarkable": "1.7.1"
   },
   "devDependencies": {
-    "react-scripts": "0.9.5"
+    "react-scripts": "0.9.5",
+    "redux-immutable-state-invariant": "1.2.4"
   },
   "scripts": {
     "start": "react-scripts start",
