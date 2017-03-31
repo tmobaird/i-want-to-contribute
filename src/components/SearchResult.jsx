@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Panel, Col, Button, Well, Collapse } from 'react-bootstrap';
 import ResultStatsRow from './ResultStatsRow';
-//import AdditionalInformationBox from './AdditionalInformationBox';
+import AdditionalInformationBox from './AdditionalInformationBox';
 import Loader from 'halogen/ClipLoader';
 import '../styles/search-result.css';
 
@@ -27,7 +27,7 @@ export default class SearchResult extends React.Component {
      * state with the results. Then setting fetching to false.
      */
     if(!this.props.data.additionalInformation) {
-      //this.props.getAdditionalInfo(this.props.data.id, this.props.data.full_name);
+      this.props.getAdditionalInfo(this.props.data.id, this.props.data.full_name);
     }
     this.setState({ open: !this.state.open });
   }
@@ -71,7 +71,7 @@ export default class SearchResult extends React.Component {
           <Collapse in={this.state.open}>
             <div>
               <hr style={{ width: "90%"}} />
-              {/* <AdditionalInformationBox fetching={this.props.data.fetchingAdditional} data={this.props.data.AdditionalInformationBox} /> */}
+              <AdditionalInformationBox fetching={this.props.data.fetchingAdditional} data={this.props.data.additionalInformation} />
             </div>
           </Collapse>
         </Panel>
