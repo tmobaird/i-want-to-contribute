@@ -1,5 +1,5 @@
 import React from 'react';
-//import SearchResultsList from './SearchResultsList';
+import SearchResultsList from './SearchResultsList';
 import Loader from 'halogen/RingLoader';
 
 export default class SearchResultsBox extends React.Component {
@@ -18,10 +18,10 @@ export default class SearchResultsBox extends React.Component {
       return (
         <div>
           <h4>Search Results for <span className="text-primary">{ this.props.searchTerm }</span></h4>
-          {/* <SearchResultsList
+          <SearchResultsList
             results={this.props.results}
             getAdditionalInfo={this.props.getAdditionalInfo}
-          /> */}
+          />
         </div>
       );
     }
