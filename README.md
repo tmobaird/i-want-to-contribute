@@ -29,3 +29,9 @@ If you're looking to start contributing, it's probably best to first familiarize
 - Axios
 - React bootstrap
 - Remarkable
+
+### Want to Contribute?
+
+This project is currently open to contributions. In fact, we encourage anyone and everyone to contribute! That's what makes open source awesome!
+
+If you'd like contribute, check out the [CONTRIBUTING]() guide. Contributing is very easy!
