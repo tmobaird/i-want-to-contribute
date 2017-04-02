@@ -1,13 +1,11 @@
 import React from 'react';
+import ContributingInformationRow from './ContributingInformationRow';
+import OpenIssuesRow from './OpenIssuesRow';
 import { Col } from 'react-bootstrap';
 import Loader from 'halogen/ClipLoader';
 
-import Remarkable from 'remarkable';
-
-const md = new Remarkable();
-
 export default class AdditionalInformationBox extends React.Component {
-  
+
   getContent() {
     if(this.props.fetching) {
       return (
@@ -16,29 +14,12 @@ export default class AdditionalInformationBox extends React.Component {
         </Col>
       );
     } else {
-      const displayText = this.getContributingContent();
-
       return (
         <div>
-          <h5>CONTRIBUTING.md</h5>
-          <div dangerouslySetInnerHTML={{__html: displayText}}></div>
-          <hr style={{ width: "90%"}} />
-          <p><strong>Issues #100: [Bug] Blah doesn't working appropriately</strong>: The click on
-        this button isn't working.</p>
-          <p><strong>Issues #100: [Disucssion Wanted] Blah doesn't working appropriately</strong>: The click on
-      this button isn't working.</p>
+          <ContributingInformationRow data={this.props.data} />
+          <OpenIssuesRow />
         </div>
       );
-    }
-  }
-
-  getContributingContent() {
-    if(this.props.data) {
-      let text = atob(this.props.data.content);
-      var shortText = text.substring(0,500); // Limits the characters to display to 500
-      return md.render(shortText + "\n\n**Read the full guide [here](http://github.com).**");
-    } else {
-      return "<strong>No Contributing Guide found</strong>";
     }
   }
 
