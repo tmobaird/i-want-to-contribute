@@ -15,3 +15,7 @@ export function searchGithub(searchTerm) {
 export function getContributing(repoName) {
   return githubAxios.get(`/repos/${repoName}/contents/CONTRIBUTING.md`);
 }
+
+export function getOpenIssues(repoName) {
+  return githubAxios.get(`/search/issues?q=repo:${repoName}+state:open&per_page=5`);
+}

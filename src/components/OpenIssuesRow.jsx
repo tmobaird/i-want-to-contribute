@@ -1,5 +1,4 @@
 import React from 'react';
-import { Col } from 'react-bootstrap';
 
 export default class OpenIssuesRow extends React.Component {
   render() {

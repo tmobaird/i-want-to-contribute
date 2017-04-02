@@ -1,5 +1,5 @@
 import * as resultsActions from './resultsActionCreators';
-import { searchGithub, getContributing } from '../utils/githubHelper';
+import { searchGithub, getContributing, getOpenIssues } from '../utils/githubHelper';
 
 /*
  * The action creators in the file will modify all of the parts of the redux state
@@ -29,9 +29,17 @@ export function getAdditionalInfo(id, repoName) {
   return function (dispatch) {
     dispatch(resultsActions.fetchingAddionalInfoStarted(id));
     setTimeout(() => {
-      getContributing(repoName)
-        .then((response) => dispatch(resultsActions.updateResult(id, response.data)))
-        .then((res) => dispatch(resultsActions.fetchingAddionalInfoFinished(id)));
+      Promise.all([
+        getContributing(repoName)
+          .then((response) => dispatch(resultsActions.updateResult(id, response.data)))
+          .catch((err) => dispatch(resultsActions.updateResult(id, err.response.data)))
+        // getOpenIssues(repoName)
+        //   .then((response) => { console.log(response.data) }) // Need to do something with these issues
+        //   .catch((err, res) => { console.log(err) }) // Need to do something with these issues
+      ]) // This will return a Promise, when the two promises inside this complete. This is used to set fetchingAdditionalInfo to false after both
+      .then(responses => {
+        dispatch(resultsActions.fetchingAddionalInfoFinished(id));
+      });
     }, 1000);
   };
 };
@@ -42,6 +50,7 @@ function updateSubmitted() {
     payload: true
   }
 }
+
 function updateSubmittedSearchTerm(term) {
   return {
     type: "SUBMITTED_SEARCH_TERM_UPDATE",
