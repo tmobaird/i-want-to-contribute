@@ -2,7 +2,8 @@ import React, { PropTypes } from 'react';
 import { Label } from 'react-bootstrap';
 
 const bsSpecialLabelDefaultProps = {
-  level: "primary"
+  level: "primary",
+  fontSize: "12px"
 };
 
 export default class BsSpecialLabel extends React.Component {
@@ -14,7 +15,7 @@ export default class BsSpecialLabel extends React.Component {
 
   getStyles() {
     return {
-      fontSize: "12px",
+      fontSize: this.props.fontSize,
       backgroundColor: this.props.color
     };
   };

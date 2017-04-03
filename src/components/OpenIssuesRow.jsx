@@ -1,15 +1,26 @@
 import React from 'react';
+import OpenIssuesList from './OpenIssuesList';
+
+const openIssuesDefaultProps = {
+  data: []
+}
 
 export default class OpenIssuesRow extends React.Component {
+  static defaultProps = openIssuesDefaultProps;
+
   render() {
-    return (
-      <div className="OpenIssuesRow">
-        <hr style={{ width: "90%"}} />
-        <p><strong>Issues #100: [Bug] Blah doesn't working appropriately</strong>: The click on
-      this button isn't working.</p>
-        <p><strong>Issues #100: [Disucssion Wanted] Blah doesn't working appropriately</strong>: The click on
-    this button isn't working.</p>
-      </div>
-    );
+    if(this.props.data.length > 0) {
+      return (
+        <div className="OpenIssuesRow">
+          <OpenIssuesList issues={this.props.data} />
+        </div>
+      );
+    } else {
+      return (
+        <div className="OpenIssuesRow">
+          <h5>No Open Issues Found</h5>
+        </div>
+      );
+    }
   }
 }

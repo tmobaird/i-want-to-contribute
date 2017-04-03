@@ -14,11 +14,19 @@ export function updateResults(data) {
   }
 }
 
-export function updateResult(id, data) {
+export function updateResultContributing(id, data) {
   return {
-    type: "RESULT_UPDATE",
+    type: "RESULT_CONTRIBUTING_UPDATE",
     id,
     payload: data
+  }
+}
+
+export function updateResultOpenIssues(id, data) {
+  return {
+    type: "RESULT_OPEN_ISSUES_UPDATE",
+    id,
+    payload: data.items
   }
 }
 
