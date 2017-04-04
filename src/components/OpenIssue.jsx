@@ -3,7 +3,6 @@ import Label from './BsSpecialLabel';
 import '../styles/open-issue.css';
 
 export default class OpenIssue extends React.Component {
-
   render() {
     const labels = this.props.data.labels.map((label, index) => {
       return (

@@ -3,7 +3,7 @@ import OpenIssue from './OpenIssue';
 import { Col } from 'react-bootstrap';
 
 const openIssuesDefaultProps = {
-  data: []
+  issues: []
 }
 
 export default class OpenIssuesList extends React.Component {
