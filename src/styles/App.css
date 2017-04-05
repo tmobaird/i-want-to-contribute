@@ -1,8 +1,11 @@
-.App {
+body {
   /*background: linear-gradient(140deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
   height: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;*/
+}
+
+.App {
   font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.4em;
   color: #4d4d4d;

@@ -10,9 +10,9 @@ export function submitSearch(value) {
   return function (dispatch) {
     if(value !== "") {
       dispatch(resultsActions.fetchingStarted());
+      dispatch(updateSubmitted());
+      dispatch(updateSubmittedSearchTerm(value));
       setTimeout(() => {
-        dispatch(updateSubmittedSearchTerm(value));
-        dispatch(updateSubmitted());
         searchGithub(value)
           .then(function(response) {
             dispatch(resultsActions.updateResults(response.data));

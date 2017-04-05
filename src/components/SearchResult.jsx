@@ -33,7 +33,7 @@ export default class SearchResult extends React.Component {
           <p>{ this.props.data.description }</p>
           <ResultStatsRow data={this.props.data} />
           <Row style={{marginRight: "5px"}}>
-            <a className='pull-right' onClick={ this.handleExpandCollapse }>Learn how you can help!</a>
+            <a className='pull-right' onClick={this.handleExpandCollapse} style={{cursor: 'pointer'}}>Learn how you can help!</a>
           </Row>
           <Collapse in={this.state.open}>
             <div>
