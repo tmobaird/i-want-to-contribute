@@ -1,0 +1,25 @@
+.app-info-sub-header {
+  font-size: 30px;
+  line-height: 40px;
+  color: #5bc0de;
+}
+
+.no-bottom-margin {
+  margin-bottom: 0px;
+}
+
+.app-info-sub-section-1 h3 {
+  color: #3572A5;
+}
+
+.app-info-sub-section-1 p {
+  font-size: 16px;
+}
+
+.app-info-sub-section-2 h3 {
+  color: #89e051;
+}
+
+.app-info-sub-section-3 h3 {
+  color: #f34b7d;
+}
