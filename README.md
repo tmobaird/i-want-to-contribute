@@ -1,5 +1,7 @@
 # I Want To Contribute
 
+![Travis Build Status](https://travis-ci.org/tmobaird/i-want-to-contribute.svg?branch=master)
+
 ### What is it?
 A React app that assists with finding open source projects that are open for contributions.
 
