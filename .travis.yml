@@ -3,8 +3,9 @@ node_js:
   - 6
   - 7
 cache:
+  yarn: true
   directories:
     - node_modules
 script:
-  - npm test
-  - npm run build
+  - yarn test
+  - yarn run build
