@@ -11,7 +11,7 @@ This can occur for an array of reasons, but most straight forward it means:
 **TL;DR Answer**: The function you're calling `setState` in probably isn't bound to `this`. You'll need to bind it to your component for it to work in event handlers. Add a statement like the following to your component's constructor: `this.yourFunctionName() = this.yourFunctionName.bind(this);`
 
 <details>
-<summary>**Long Answer**: (click to show)</summary>
+<summary><b>Long Answer</b>: (click to show)</summary>
 
 This most commonly occurs when you are attempting to use `this.setState(someData)`, and the scope that you are in is not bound to `this`. A very common example of this is in event handler functions. For example, say you have an input field that `onChange` (when the input value changes), calls the function `handleInputChange()` and attempts to update the state attribute `input` with the new input value. Like this:
 
