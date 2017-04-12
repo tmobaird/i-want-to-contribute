@@ -8,7 +8,7 @@ This can occur for an array of reasons, but most straight forward it means:
 
 > Whatever you are attempting to call `setState` on does not exist (is undefined)
 
-**TL;DR Answer**: The function you're calling `setState` in probably isn't bound to `this`. Add a statement like the following to your component's constructor: `this.yourFunctionName() = this.yourFunctionName.bind(this);`
+**TL;DR Answer**: The function you're calling `setState` in probably isn't bound to `this`. You'll need to bind it to your component for it to work in event handlers. Add a statement like the following to your component's constructor: `this.yourFunctionName() = this.yourFunctionName.bind(this);`
 
 <details>
 <summary>**Long Answer**: (click to show)</summary>
