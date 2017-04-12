@@ -8,7 +8,7 @@
 
 ### Additional Resources
 
-What better way to learn redux and react w/ redux than from the creator of Redux, Dan Abramov! For those of you who are visual learners, and much prefer watching video tutorials over reading, Dan Abramov has published a brilliant set of FREE videos to Egghead.io that explain the ideas behind Redux, what Redux actually does, and how to use it with React. These were really some of the greatest resources in my honest opinion. In these videos, he not only shows you how he wrote Redux (it's way simpler than you think!), but the best practices for it as well. You can find the video series [here](https://egghead.io/instructors/dan-abramov?order=ASC).
+What better way to learn redux and react w/ redux than from the creator of Redux, [Dan Abramov](https://github.com/gaearon)! For those of you who are visual learners, and much prefer watching video tutorials over reading, Dan Abramov has published a brilliant set of FREE videos to Egghead.io that explain the ideas behind Redux, what Redux actually does, and how to use it with React. These were really some of the greatest resources in my honest opinion. In these videos, he not only shows you how he wrote Redux (it's way simpler than you think!), but the best practices for it as well. You can find the video series [here](https://egghead.io/instructors/dan-abramov?order=ASC).
 
 Or watch a couple of my favorites until you get hooked:
 
