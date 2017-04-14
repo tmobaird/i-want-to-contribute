@@ -1,6 +1,7 @@
 # I Want To Contribute
 
 [![Build Status](https://travis-ci.org/tmobaird/i-want-to-contribute.svg?branch=master)](https://travis-ci.org/tmobaird/i-want-to-contribute)
+![Contributions Welcome][contributing-badge]
 
 ### What is it?
 A React app that assists with finding open source projects that are open for contributions.
@@ -37,3 +38,5 @@ If you're looking to start contributing, it's probably best to first familiarize
 This project is currently open to contributions. In fact, we encourage anyone and everyone to contribute! That's what makes open source awesome!
 
 If you'd like contribute, check out the [CONTRIBUTING]() guide. Contributing is very easy!
+
+[contributing-badge]: https://img.shields.io/badge/contributions-welcome!-4BADFF.svg
