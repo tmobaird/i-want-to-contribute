@@ -1,5 +1,7 @@
 # Common Problems
 
+![Contributions Welcome][contributing-badge]
+
 Development headaches are no bueno :x:. This doc includes a list of commonly encountered problems during react development. If there's an issue you've encountered during your personal react development that you do not see on this, feel free to create a PR and add it. The more the merrier! :white_check_mark:
 
 ##### _Uncaught TypeError: Cannot read property 'setState' of undefined_
@@ -48,3 +50,5 @@ constructor(props) {
 
 Your function is now bound and should work properly :+1:.
 </details>
+
+[contributing-badge]: https://img.shields.io/badge/contributions-welcome!-4BADFF.svg

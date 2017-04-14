@@ -37,7 +37,7 @@ That's right, the bulk of Redux is about 100 lines total. Simplicity level > 900
 
 ### Why Use It?
 
-TODO...
+Todo: ![Contributions Welcome][contributing-badge]
 
 ### How To Use It?
 
@@ -75,3 +75,4 @@ If the video series doesn't cut it for you, and you prefer reading docs, check o
 [Implementing Store from Scratch - Thumbnail]: https://embedwistia-a.akamaihd.net/deliveries/b952331f6850b48aa709d14ff97ccfd3e87b31aa.jpg?image_play_button_size=2x&amp;image_crop_resized=960x540&amp;image_play_button=1&amp;image_play_button_color=7b796ae0
 [Implementing combineReducers() from Scratch - Thumbnail]: https://embedwistia-a.akamaihd.net/deliveries/5e8319936a32fb09520eb340645d7513dd5cde72.jpg?image_play_button_size=2x&amp;image_crop_resized=960x540&amp;image_play_button=1&amp;image_play_button_color=7b796ae0
 [Redux Tweet]: ../images/redux-tweet.png
+[contributing-badge]: https://img.shields.io/badge/contributions-welcome!-4BADFF.svg
