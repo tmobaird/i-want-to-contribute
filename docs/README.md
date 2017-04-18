@@ -15,9 +15,10 @@ This guide is completely open to contributions. If there is something you see th
 ### Table of Contents
 
 - React
-  - [The Basics](react/the-basics.md) ![Contributing Icon][contributions-icon] ![In Progress Icon][in-progress-icon]
-  - [State](react/state.md) ![Contributing Icon][contributions-icon] ![Todo Icon][todo-icon]
+  - [The Basics](react/the-basics.md) ![Contributing Icon][contributions-icon]
+  - [Components](react/components.md) ![Contributing Icon][contributions-icon] ![In Progress Icon][in-progress-icon]
   - [Props](react/props.md) ![Contributing Icon][contributions-icon] ![Todo Icon][todo-icon]
+  - [State](react/state.md) ![Contributing Icon][contributions-icon] ![Todo Icon][todo-icon]
   - [React.Component vs Functional Components](react/react-component-vs-functional-component.md) ![Contributing Icon][contributions-icon] ![Todo Icon][todo-icon]
 - Additional Reading ![Contributing Icon][contributions-icon]
   - [Redux](additional-reading/redux.md) ![Contributing Icon][contributions-icon] ![In Progress Icon][in-progress-icon]
