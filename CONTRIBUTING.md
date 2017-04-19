@@ -6,10 +6,10 @@ If you'd like to contribute, check out the currently open issues. Generally thos
 
 ### Contents
 
-- [Setting Up Your Dev Environment](#Setting-Up-Your-Dev-Environment)
-- [Doc Changes](#Doc-Changes)
-- [General Non-Doc Contribution Flow](#General-Non-Doc-Contribution-Flow)
-- [Running Tests](#Running-Tests)
+- [Setting Up Your Dev Environment](#setting-up-your-dev-environment)
+- [Doc Changes](#doc-changes)
+- [General Non-Doc Contribution Flow](#general-non-doc-contribution-flow)
+- [Running Tests](#running-tests)
 
 ### Setting Up Your Dev Environment
 

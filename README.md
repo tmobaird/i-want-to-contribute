@@ -37,7 +37,7 @@ If you're looking to start contributing, it's probably best to first familiarize
 
 This project is currently open to contributions. In fact, we encourage anyone and everyone to contribute! That's what makes open source awesome!
 
-If you'd like contribute, check out the [CONTRIBUTING]() guide. Contributing is very easy!
+If you'd like contribute, check out the [CONTRIBUTING]('https://github.com/tmobaird/i-want-to-contribute/blob/master/CONTRIBUTING.md') guide. Contributing is very easy!
 
 [build-status-badge]: https://travis-ci.org/tmobaird/i-want-to-contribute.svg?branch=master
 [contributing-badge]: https://img.shields.io/badge/contributions-welcome!-4BADFF.svg
