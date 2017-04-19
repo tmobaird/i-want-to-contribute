@@ -3,7 +3,7 @@
 ![Contributions Welcome][contributing-badge]
 ![In Progress][in-progress-badge]
 
-Components are the :heart: or React. They are also a big reason as to why React is so easy to learn and use! If you are familiar with [Object Oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming), then this will really click for you. For those who don't know, [JavaScript is an Object Oriented language](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects). React Components (which are obviously written in JavaScript) allow you to decompose your UI into `React.Component` classes (or simply JavaScript functions) that will render down to some HTML. This allows you to take advantage of a lot of the common benefits of Object Oriented programming, some of those being: **code reuse** (keeping things DRY), **maintenance ease**, **isolation**, and **encapsulation**.
+Components are the :heart: of React. They are also a big reason as to why React is so easy to learn and use! If you are familiar with [Object Oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming), then this will really click for you. For those who don't know, [JavaScript is an Object Oriented language](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects). React Components (which are obviously written in JavaScript) allow you to decompose your UI into `React.Component` classes (or simply JavaScript functions) that will render down to some HTML. This allows you to take advantage of a lot of the common benefits of Object Oriented programming, some of those being: **code reuse** (keeping things DRY), **maintenance ease**, **isolation**, and **encapsulation**.
 
 ### The Component Hierarchy
 
