@@ -1,7 +1,7 @@
 # React: Components
 
 ![Contributions Welcome][contributing-badge]
-![In Progress][in-progress-badge]
+![Under Review Badge][under-review-badge]
 
 Components are the :heart: of React. They are also a big reason as to why React is so easy to learn and use! If you are familiar with [Object Oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming), then this will really click for you. For those who don't know, [JavaScript is an Object Oriented language](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects). React Components (which are obviously written in JavaScript) allow you to decompose your UI into `React.Component` classes (or simply JavaScript functions) that will render down to some HTML. This allows you to take advantage of a lot of the common benefits of Object Oriented programming, some of those being: **code reuse** (keeping things DRY), **maintenance ease**, **isolation**, and **encapsulation**.
 
@@ -61,4 +61,5 @@ At this point, I'm sure everything sounds good in theory, but I bet there are a 
 [contributing-badge]: https://img.shields.io/badge/contributions-welcome!-4BADFF.svg
 [coming-soon-badge]: https://img.shields.io/badge/coming-soon!-FF6262.svg
 [in-progress-badge]: https://img.shields.io/badge/in-progress-EDE128.svg
+[under-review-badge]: https://img.shields.io/badge/under-review-C486FF.svg
 [react-component-example-img]: ../images/react-component-example.png
