@@ -1,0 +1,20 @@
+.NavigationBar {
+  margin-left: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.navbar-link {
+  color: #337ab7;
+  font-weight: bolder;
+}
+
+.navbar-link:focus {
+  text-decoration: none;
+}
+
+.navbar-link.active {
+  color: #A64CFF;
+  font-weight: bold;
+  font-size: 16px;
+}

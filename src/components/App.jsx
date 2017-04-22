@@ -1,16 +1,15 @@
 import React, { Component, PropTypes } from 'react';
-import { Link, IndexLink } from 'react-router';
+import NavigationBar from './NavigationBar';
 import '../styles/App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="container App">
-        <IndexLink to="/">Home</IndexLink>
-        {' | '}
-        <Link to="/about">About</Link>
-        <br/>
-        {this.props.children}
+      <div className="App">
+        <NavigationBar />
+        <div className="container">
+          {this.props.children}
+        </div>
       </div>
     );
   }
