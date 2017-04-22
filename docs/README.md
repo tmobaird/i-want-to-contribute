@@ -10,13 +10,14 @@ This guide is completely open to contributions. If there is something you see th
 
 ![Contributing Icon][contributions-icon] means **contributions are welcome** for an item.  
 ![In Progress Icon][in-progress-icon] means the item development is currently **in progress**.  
-![Todo Icon][todo-icon] means **todo**, or that this item needs to completed.
+![Todo Icon][todo-icon] means **todo**, or that this item needs to completed.  
+![Under Review Icon][under-review-icon] means the item was recently finished and its content is being **reviewed**.
 
 ### Table of Contents
 
 - React
   - [The Basics](react/the-basics.md) ![Contributing Icon][contributions-icon]
-  - [Components](react/components.md) ![Contributing Icon][contributions-icon] ![In Progress Icon][in-progress-icon]
+  - [Components](react/components.md) ![Contributing Icon][contributions-icon] ![Under Review Icon][under-review-icon]
   - [Props](react/props.md) ![Contributing Icon][contributions-icon] ![Todo Icon][todo-icon]
   - [State](react/state.md) ![Contributing Icon][contributions-icon] ![Todo Icon][todo-icon]
   - [React.Component vs Functional Components](react/react-component-vs-functional-component.md) ![Contributing Icon][contributions-icon] ![Todo Icon][todo-icon]
@@ -43,6 +44,7 @@ The docs part of this project is completely open for contributions! Feel free to
   - ![Contributing Badge][contributing-badge]
   - ![In Progress Badge][in-progress-badge]
   - ![Coming Soon Badge][coming-soon-badge]
+  - ![Under Review Badge][under-review-badge]
 - **Make your doc fun! The last thing we want is for readers to get bored. Feel free to add emojis, images, videos, or whatever you want to spice up your doc. As long as the content is solid and is enticing to read, it has a home here! :+1:**
 
 For an official guide about how to contribute to this project, check out this project's [Contributing Guide](https://github.com/tmobaird/i-want-to-contribute/blob/master/CONTRIBUTING.md).
@@ -50,9 +52,10 @@ For an official guide about how to contribute to this project, check out this pr
 A big kudos to all the contributors. You all are awesome!
 
 [contributing-badge]: https://img.shields.io/badge/contributions-welcome!-4BADFF.svg
+[coming-soon-badge]: https://img.shields.io/badge/coming-soon!-FF6262.svg
+[in-progress-badge]: https://img.shields.io/badge/in-progress-EDE128.svg
+[under-review-badge]: https://img.shields.io/badge/under-review-C486FF.svg
 [contributions-icon]: images/contributions-icon.png
 [in-progress-icon]: images/in-progress-icon.png
 [todo-icon]: images/todo-icon.png
-[contributing-badge]: https://img.shields.io/badge/contributions-welcome!-4BADFF.svg
-[coming-soon-badge]: https://img.shields.io/badge/coming-soon!-FF6262.svg
-[in-progress-badge]: https://img.shields.io/badge/in-progress-EDE128.svg
+[under-review-icon]: images/under-review-icon.png
