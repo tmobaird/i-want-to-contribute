@@ -51,7 +51,6 @@ config.vm.network "forwarded_port", guest: 3000, host: 3000
 
 You should now be able to access your app now at http://localhost:3000
 
-
 ### Doc Changes
 
 This project should include detailed docs about tools, methodologies, and approaches that are used within this application. This will serve as a good place for others to learn, but solidify the knowledge of these things to the doc authors.
