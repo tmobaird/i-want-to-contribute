@@ -41,17 +41,6 @@ REACT_APP_GITHUB_TOKEN=<Your Github Token>
 
 Voila! Your dev environment is all set up! You can now run `yarn start` to spin up your development server, which will redirect you to the app in your browser.
 
-#### Vagrant Environment
-
-Using the default `ubuntu/trusty64` should work fine. You will need to forward a port to access the app from your local machine. Add this line to your Vagrantfile:
-
-```
-config.vm.network "forwarded_port", guest: 3000, host: 3000
-```
-
-You should now be able to access your app now at http://localhost:3000
-
-
 ### Doc Changes
 
 This project should include detailed docs about tools, methodologies, and approaches that are used within this application. This will serve as a good place for others to learn, but solidify the knowledge of these things to the doc authors.
@@ -69,9 +58,9 @@ Referencing source code files, use a full url path like: [src/components/SearchB
 1. Make sure the change you want to make has an issue related to it. If it doesn't, feel free to create one!
 2. Fork the repo to your namespace and set up your development environment.
 3. Perform a `git checkout` and checkout a branch named something that is related to the change you are making. Some examples are:
-    - `feature/adding-search-filters`
-    - `fix/catching-search-error`
-    - `docs/react-redux`
+    - `feature-adding-search-filters`
+    - `fix-catching-search-error`
+    - `docs-react-redux`
 4. Make the desired code changes in your favorite editor and commit your changes!
 5. Write tests for the code you've added (or make sure tests exist for the code you wrote).
     - If you don't know how to write tests with Jest, don't worry! Push up the code and create a pull request to the main repo. A maintainer will help your write tests for your newly added code. We all have to start somewhere!
