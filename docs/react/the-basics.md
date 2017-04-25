@@ -48,7 +48,7 @@ ReactDOM.render(
 
 This will render `<h1>Hello World</h1>` within the DOM element with the id "root". This is the very most basic entry point for using React within your webpage/application. It can even be said that the `<h1>` that was render is our most basic React **Component**.
 
-[&#x2190; Previous]() | [Next Up: **Components** &#x2192;](components.md)
+[Next Up: **Components** &#x2192;](components.md)
 
 [react-badge]: https://img.shields.io/npm/v/react.svg
 [react-dom-badge]: https://img.shields.io/npm/v/react-dom.svg
