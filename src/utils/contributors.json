@@ -1,0 +1,41 @@
+{
+  "locations": [
+    {
+      "name": "Virginia",
+      "latitude": 37.4316,
+      "longitude": -78.6569,
+      "contributors": [
+        {
+          "name": "Thomas Baird",
+          "username": "tmobaird"
+        },
+        {
+          "name": "David Shrestha",
+          "username": "dshrest"
+        }
+      ]
+    },
+    {
+      "name": "California",
+      "latitude": 36.7783,
+      "longitude": -119.4179,
+      "contributors": [
+        {
+          "name": "Devin Osorio",
+          "username": "cubadomingo"
+        }
+      ]
+    },
+    {
+      "name": "New York",
+      "latitude": 40.7128,
+      "longitude": -74.0059,
+      "contributors": [
+        {
+          "name": "AdamFreemer",
+          "username": "AdamFreemer"
+        }
+      ]
+    }
+  ]
+}
