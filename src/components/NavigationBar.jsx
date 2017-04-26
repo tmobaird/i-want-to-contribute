@@ -10,6 +10,8 @@ class NavigationBar extends Component {
         <IndexLink to="/" className="navbar-link" activeClassName="active">Home</IndexLink>
         {' | '}
         <Link to="/about" className="navbar-link" activeClassName="active">About</Link>
+        {' | '}
+        <Link to="/contributors" className="navbar-link" activeClassName="active">Contributors</Link>
       </Row>
     );
   }
