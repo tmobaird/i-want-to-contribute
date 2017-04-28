@@ -23,6 +23,10 @@
         {
           "name": "Devin Osorio",
           "username": "cubadomingo"
+        },
+        {
+          "name": "RC Brown",
+          "username": "GeneralMeow"
         }
       ]
     },
@@ -32,7 +36,7 @@
       "longitude": -74.0059,
       "contributors": [
         {
-          "name": "AdamFreemer",
+          "name": "Adam Freemer",
           "username": "AdamFreemer"
         }
       ]
