@@ -26,6 +26,7 @@ This guide is completely open to contributions. If there is something you see th
   - Webpack ![Contributing Icon][contributions-icon] ![Todo Icon][todo-icon]
   - Yarn ![Contributing Icon][contributions-icon] ![Todo Icon][todo-icon]
 - [Common Problems](common-problems.md) ![Contributing Icon][contributions-icon]
+- [Additional Resources](additional-resources.md) ![Contributing Icon][contributions-icon] ![In Progress Icon][in-progress-icon]
 - [Create React App Guide](create-react-app-readme.md)
 
 ### Contributing
