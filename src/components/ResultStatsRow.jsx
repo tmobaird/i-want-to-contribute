@@ -13,7 +13,7 @@ const ResultStatsRow = (props) => {
         <InformationLabel data={data.forks_count} level="success">{ "Forks: " }</InformationLabel>
         <InformationLabel data={data.stargazers_count} level="warning">{ "Stars: " }</InformationLabel>
         <InformationLabel data={data.watchers_count} level="info">{ "Watchers: " }</InformationLabel>
-        <InformationLabel data={data.open_issues_count} color="#C370E8">{ "Issues: " }</InformationLabel>
+        <InformationLabel data={data.open_issues_count} color="#C370E8">{ "Iss: " }</InformationLabel>
         <InformationLabel data={data.language} color={languageColors[data.language]} />
       </Col>
     </Row>
