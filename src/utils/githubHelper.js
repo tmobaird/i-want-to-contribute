@@ -17,5 +17,5 @@ export function getContributing(repoName) {
 }
 
 export function getOpenIssues(repoName) {
-  return githubAxios.get(`/search/issues?q=repo:${repoName}+state:open&per_page=5`);
+  return githubAxios.get(`/search/issues?q=repo:${repoName}+state:open+is:issue&per_page=5`);
 }
