@@ -1,6 +1,8 @@
 # Additional Resources
 
-Here you will find links to additional resources for the frameworks and libraries used in this project.
+![Contributing Badge][contributing-badge] ![In Progress Badge][in-progress-badge]
+
+Here you will find links to additional resources for the frameworks and libraries used in this project. Feel free to add any resources that you have found useful in your own process of learning react!
 
 ## React
 
@@ -45,3 +47,8 @@ Here you will find links to additional resources for the frameworks and librarie
 [React Router v4: Testing](https://reacttraining.com/react-router/web/guides/testing)
 
 [How To exclude CSS, Images, anything from Unit Tests](https://diessi.ca/blog/how-to-exclude-css-images-anything-from-unit-tests/)
+
+[contributing-badge]: https://img.shields.io/badge/contributions-welcome!-4BADFF.svg
+[coming-soon-badge]: https://img.shields.io/badge/coming-soon!-FF6262.svg
+[in-progress-badge]: https://img.shields.io/badge/in-progress-EDE128.svg
+[under-review-badge]: https://img.shields.io/badge/under-review-C486FF.svg
