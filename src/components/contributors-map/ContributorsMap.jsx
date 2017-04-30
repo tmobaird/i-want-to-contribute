@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { Map, TileLayer } from 'react-leaflet';
 import MapMarkerList from './MapMarkerList';
-import '../../styles/leaflet-map.css';
+import './styles/leaflet-container.css';
 
 export default class ContributorsMap extends React.Component {
   static propTypes = {
