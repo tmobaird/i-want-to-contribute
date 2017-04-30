@@ -1,15 +1,14 @@
 import React, { PropTypes } from 'react';
 import Contributor from './Contributor';
+import './styles/contributor-list.css';
 
 const ContributorList = (props) => {
   const contributors = props.contributors.map((c,iter) => {
-    return (
-      <Contributor key={iter} {...c} />
-    );
+    return <Contributor key={iter} {...c} />;
   });
 
   return (
-    <ul className="contributor-list" style={{paddingLeft: "15px"}}>
+    <ul className="contributor-list">
       { contributors }
     </ul>
   );
