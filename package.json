@@ -11,6 +11,7 @@
     "react": "15.4.2",
     "react-bootstrap": "0.30.8",
     "react-dom": "15.4.2",
+    "react-emojione": "^3.1.7",
     "react-leaflet": "^1.1.6",
     "react-redux": "5.0.1",
     "react-router": "3.0.0",

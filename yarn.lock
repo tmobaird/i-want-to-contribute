@@ -4438,6 +4438,10 @@ react-dom@15.4.2:
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
 
+react-emojione@^3.1.7:
+  version "3.1.7"
+  resolved "https://registry.yarnpkg.com/react-emojione/-/react-emojione-3.1.7.tgz#a7ccb09404bd03db2b3cee2c476107f44b83a183"
+
 react-leaflet@^1.1.6:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/react-leaflet/-/react-leaflet-1.1.6.tgz#a3a42cbe1d32168223f7e47e6d9f89a52fa358ab"
