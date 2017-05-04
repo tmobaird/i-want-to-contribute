@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import Emojify from 'react-emojione';
 import ContributorList from './ContributorList.jsx';
 import './styles/map-marker-popup-information.css';
 
@@ -7,7 +8,10 @@ const MapMarkerPopupInformation = (props) => {
 
   return (
     <div className="map-marker-popup-information">
-      <h5>{ location.name }</h5>
+      <h5>
+        <span className="location-name">{ `${location.name} ` }</span>
+        <Emojify><span>{ `:${location.emoji}:` }</span></Emojify>
+      </h5>
       <hr />
       <ContributorList contributors={location.contributors} />
     </div>

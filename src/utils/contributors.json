@@ -2,6 +2,7 @@
   "locations": [
     {
       "name": "Virginia",
+      "emoji": "icecream",
       "latitude": 37.4316,
       "longitude": -78.6569,
       "contributors": [
@@ -17,6 +18,7 @@
     },
     {
       "name": "California",
+      "emoji": "bridge_at_night",
       "latitude": 36.7783,
       "longitude": -119.4179,
       "contributors": [
@@ -32,6 +34,7 @@
     },
     {
       "name": "New York",
+      "emoji": "statue_of_liberty",
       "latitude": 40.7128,
       "longitude": -74.0059,
       "contributors": [
