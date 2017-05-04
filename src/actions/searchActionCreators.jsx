@@ -1,5 +1,6 @@
 import * as resultsActions from './resultsActionCreators';
 import { searchGithub, getContributing, getOpenIssues } from '../utils/githubHelper';
+import { parseOpenIssues } from '../utils/openIssuesParser';
 
 /*
  * The action creators in the file will modify all of the parts of the redux state
@@ -34,7 +35,8 @@ export function getAdditionalInfo(id, repoName) {
           .then((response) => dispatch(resultsActions.updateResultContributing(id, response.data)))
           .catch((err) => dispatch(resultsActions.updateResultContributing(id, err.response.data))),
         getOpenIssues(repoName)
-          .then((response) => dispatch(resultsActions.updateResultOpenIssues(id, response.data)))
+          .then((response) => { return parseOpenIssues(response.data.items) })
+          .then((issues) => dispatch(resultsActions.updateOpenIssues(id, issues)))
           .catch((err, res) => { console.log(err) }) // Need to do something with these issues
       ]) // This will return a Promise, when the two promises inside this complete. This is used to set fetchingAdditionalInfo to false after both
       .then(responses => {
