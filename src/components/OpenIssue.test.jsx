@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import OpenIssue from './OpenIssue';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 describe('renders', () => {
   const data = {
