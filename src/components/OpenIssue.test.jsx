@@ -19,30 +19,20 @@ describe('renders', () => {
   describe("bottom border rendering", () => {
     describe('when props.last === true', () => {
       it('does not include bottom border stlye', () => {
-        const wrapper = mount(<OpenIssue data={data} last={true} />);
-        expect(wrapper.find(".OpenIssue").get(0).style._values).toEqual({});
+        const wrapper = shallow(<OpenIssue data={data} last={true} />);
+        expect(wrapper.find(".OpenIssue.with-bottom-border")).toHaveLength(0);
       });
     });
     describe('when props.last != true', () => {
       it('includes bottom border stlye', () => {
-        const wrapper = mount(<OpenIssue data={data} last={false} />);
-        expect(wrapper.find(".OpenIssue").get(0).style._values).toEqual({
-          "border-bottom": "1px solid #EAEAEA",
-          "border-bottom-color": "#EAEAEA",
-          "border-bottom-style": "solid",
-          "border-bottom-width": "1px"
-        });
+        const wrapper = shallow(<OpenIssue data={data} last={false} />);
+        expect(wrapper.find(".OpenIssue.with-bottom-border")).toHaveLength(1);
       });
     });
     describe('when props.last is undefined', () => {
       it('includes bottom border stlye', () => {
-        const wrapper = mount(<OpenIssue data={data} />);
-        expect(wrapper.find(".OpenIssue").get(0).style._values).toEqual({
-          "border-bottom": "1px solid #EAEAEA",
-          "border-bottom-color": "#EAEAEA",
-          "border-bottom-style": "solid",
-          "border-bottom-width": "1px"
-        });
+        const wrapper = shallow(<OpenIssue data={data} />);
+        expect(wrapper.find(".OpenIssue.with-bottom-border")).toHaveLength(1);
       });
     });
   });

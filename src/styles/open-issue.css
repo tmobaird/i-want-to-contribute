@@ -3,6 +3,10 @@
   padding-top: 2px;
 }
 
+.OpenIssue.with-bottom-border {
+  border-bottom: 1px solid #EAEAEA;
+}
+
 .OpenIssue .created-at {
   font-size: 10px;
   margin-bottom: 0px;
