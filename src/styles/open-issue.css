@@ -1,6 +1,9 @@
 .OpenIssue {
   padding-bottom: 2px;
   padding-top: 2px;
+}
+
+.OpenIssue.with-bottom-border {
   border-bottom: 1px solid #EAEAEA;
 }
 

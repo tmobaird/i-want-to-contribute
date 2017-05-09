@@ -1,6 +1,6 @@
 import React from 'react';
 import OpenIssue from './OpenIssue';
-import { Col } from 'react-bootstrap';
+import '../styles/open-issues-list.css';
 
 const openIssuesDefaultProps = {
   issues: []
@@ -11,15 +11,24 @@ export default class OpenIssuesList extends React.Component {
 
   render() {
     const openIssues = this.props.issues.map((issue, index) => {
-      return <OpenIssue key={index} data={issue} />;
+      const last = (index === (this.props.issues.length - 1));
+      return <OpenIssue key={index} data={issue} last={last} />;
     });
-    return (
-      <div className="OpenIssuesList">
-        <Col xs={12} md={10} mdOffset={1}>
-          <h4>Open Issues</h4>
+
+    if(this.props.issues.length > 0) {
+      return (
+        <div className="OpenIssuesList">
+          { this.props.children }
           { openIssues }
-        </Col>
-      </div>
-    );
+        </div>
+      );
+    } else {
+      return (
+        <div className="OpenIssuesList">
+          { this.props.children }
+          <h5 className="text-center">No Open Issues Found</h5>
+        </div>
+      );
+    }
   }
 }

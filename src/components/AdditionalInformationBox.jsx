@@ -18,7 +18,10 @@ export default class AdditionalInformationBox extends React.Component {
         <div>
           <ContributingInformationRow data={this.props.data.contributing} />
           <hr style={{width: "90%"}} />
-          <OpenIssuesRow data={this.props.data.openIssues}/>
+          <OpenIssuesRow
+            openIssues={this.props.data.openIssues}
+            suggestedIssues={this.props.data.suggestedIssues}
+          />
         </div>
       );
     } else {

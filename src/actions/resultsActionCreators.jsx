@@ -14,6 +14,13 @@ export function updateResults(data) {
   }
 }
 
+export function updateOpenIssues(id, data) {
+  return function (dispatch) {
+    dispatch(updateResultOpenIssues(id, data.openIssues))
+    dispatch(updateResultSuggestedIssues(id, data.suggestedIssues))
+  }
+}
+
 export function updateResultContributing(id, data) {
   return {
     type: "RESULT_CONTRIBUTING_UPDATE",
@@ -26,7 +33,15 @@ export function updateResultOpenIssues(id, data) {
   return {
     type: "RESULT_OPEN_ISSUES_UPDATE",
     id,
-    payload: data.items
+    payload: data
+  }
+}
+
+export function updateResultSuggestedIssues(id, data) {
+  return {
+    type: "RESULT_SUGGESTED_ISSUES_UPDATE",
+    id,
+    payload: data
   }
 }
 
