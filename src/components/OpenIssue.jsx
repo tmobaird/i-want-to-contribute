@@ -2,13 +2,9 @@ import React from 'react';
 import Label from './BsSpecialLabel';
 import '../styles/open-issue.css';
 
-const getClasses = (last=false) => {
-  if(!last) { return "OpenIssue with-bottom-border" };
-  return "OpenIssue";
-}
-
 const OpenIssue = (props) => {
-  const classes = getClasses(props.last);
+  // Shows bottom border if last === false
+  const classes = (props.last) ? "OpenIssue" : "OpenIssue with-bottom-border";
   const labels = props.data.labels.map((label, index) => {
     return (
       // Adding this class here allows me to leverage the spacing between labels
@@ -27,6 +23,10 @@ const OpenIssue = (props) => {
       <p className="created-at"><small>{`Opened on ${props.data.created_at}`}</small></p>
     </div>
   );
+}
+
+OpenIssue.defaultProps = {
+  last: false
 }
 
 export default OpenIssue;
