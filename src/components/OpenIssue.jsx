@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 import Label from './BsSpecialLabel';
 import '../styles/open-issue.css';
 
@@ -20,7 +21,7 @@ const OpenIssue = (props) => {
         <strong>{props.data.title}</strong> <small>{` #${props.data.number} `}</small>
       </a>
       { labels }
-      <p className="created-at"><small>{`Opened on ${props.data.created_at}`}</small></p>
+      <p className="created-at"><small>{`Opened ${moment(props.data.created_at).fromNow()}`}</small></p>
     </div>
   );
 }
