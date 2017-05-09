@@ -5,7 +5,7 @@ import {Link} from 'react-router';
 const AboutPage = () => {
   return (
     <div>
-      <h2 className="alt-header">About</h2>
+      <h2 className="alt-header">About <small>{ "v1.0.0" }</small></h2>
       <p>
         This example app is part of the <a href="https://github.com/facebookincubator/create-react-app">create-react-app
         starter kit</a>.

@@ -15,7 +15,7 @@ const AppInfo = (props) => (
           <p>I Want To Contribute allows you to search for any project that exists on
             github.com and will easily show you the contriubting info for the project, as well as some good places to start contributing.
             We know contributing is hard, but is awesome at the same time! So we hope to welcome as many people we can, with open arms,
-            to the open source community. If you have any suggestions for potential features to add, feel free to create an issue about it <a>here</a>!</p>
+            to the open source community. If you have any suggestions for potential features to add, feel free to create an issue about it <a href="https://github.com/tmobaird/i-want-to-contribute/issues/new" target="_blank">here</a>!</p>
         </Col>
       </Row>
       <Row>
@@ -26,9 +26,9 @@ const AppInfo = (props) => (
           as an example for some of the best practices for these libraries.</p>
         </Col>
         <Col sm={6} className="text-center app-info-sub-section-3">
-          <h3>Hosted on Github Pages</h3>
-          <p>The awesome people at Github have made it incredibly easy to host applications on Github (via Github Pages). This app currently lives on Github Pages. This is possible because of the amazing
-           work by the contributors of create-react-app (and those at Github).</p>
+          <h3>Hosted on Netlify</h3>
+          <p>The awesome people at <a href="https://www.netlify.com/" target="_blank">Netlify</a> have made it incredibly easy to deploy and host applications. This app currently lives on Netlify. This is possible because of the amazing
+           work by the contributors of create-react-app (and those at Netlify).</p>
         </Col>
       </Row>
     </Col>
