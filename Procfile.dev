@@ -1,0 +1,2 @@
+express: node src/server.js
+web: yarn run start-ui

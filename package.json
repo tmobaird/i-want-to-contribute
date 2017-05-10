@@ -5,9 +5,12 @@
   "dependencies": {
     "axios": "0.15.3",
     "bootstrap": "^3.3.7",
+    "express": "^4.15.2",
+    "foreman": "^2.0.0",
     "halogen": "0.2.0",
     "leaflet": "^1.0.3",
     "moment": "^2.18.1",
+    "morgan": "^1.8.1",
     "object-assign": "4.1.0",
     "react": "15.4.2",
     "react-bootstrap": "0.30.8",
@@ -31,7 +34,8 @@
     "redux-immutable-state-invariant": "1.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "nf start -j Procfile.dev",
+    "start-ui": "PORT=3000 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
