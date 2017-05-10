@@ -2,6 +2,9 @@
 
 [![Build Status][build-status-badge]](https://travis-ci.org/tmobaird/i-want-to-contribute)
 [![Contributions Welcome][contributing-badge]](CONTRIBUTING.md)
+[![Netlify Deployed][netlify-deployed-badge]](https://i-want-to-contribute.netlify.com/)
+
+**The app is currently up and running [here](https://i-want-to-contribute.netlify.com/)!**
 
 ### What is it?
 A React app that assists with finding open source projects that are open for contributions.
@@ -41,3 +44,4 @@ If you'd like contribute, check out the [CONTRIBUTING](https://github.com/tmobai
 
 [build-status-badge]: https://travis-ci.org/tmobaird/i-want-to-contribute.svg?branch=master
 [contributing-badge]: https://img.shields.io/badge/contributions-welcome!-4BADFF.svg
+[netlify-deployed-badge]: https://img.shields.io/badge/netlify-deployed-00ad9f.svg
