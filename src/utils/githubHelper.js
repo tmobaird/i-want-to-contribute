@@ -1,8 +1,17 @@
 import axios from 'axios';
 
+const apiUrl = () => {
+  if(process.env.BUNDLED_DEPLOY === 'true') {
+    return ""; // Uses relative path since client is being served from express server
+  } else if(process.env.REACT_APP_EXPRESS_URL) {
+    return process.env.REACT_APP_EXPRESS_URL; // Manually overridden URL
+  } else {
+    return "http://localhost:5000"; // Default URL for dev
+  }
+}
+
 const githubAxios = axios.create({
-  //baseURL: 'https://api.github.com',
-  baseURL: process.env.NODE_ENV === 'production' ? process.env.REACT_APP_EXPRESS_URL : "http://localhost:5000"
+  baseURL: apiUrl()
 });
 
 export function searchGithub(searchTerm) {
