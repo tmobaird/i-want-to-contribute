@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "0.15.3",
     "bootstrap": "^3.3.7",
+    "colors": "^1.1.2",
     "dotenv": "^4.0.0",
     "express": "^4.15.2",
     "foreman": "^2.0.0",
