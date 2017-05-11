@@ -27,9 +27,11 @@ function getOpenIssues(repoName) {
   return githubAxios.get(`/search/issues?q=repo:${repoName}+state:open+is:issue&per_page=15`);
 }
 
-app.listen(5000, function () {
-  console.log('Running on port 5000')
+const port = process.env.NODE_ENV === 'production' ? 3000 : 5000
+app.listen(port, function () {
+  console.log(`Running on port ${port}`)
 })
+
 // respond with "hello world" when a GET request is made to the homepage
 app.get('/', function (req, res) {
   res.send('App up and running')
