@@ -1,1 +1,1 @@
-express: node src/server.js
+express: node src/server
