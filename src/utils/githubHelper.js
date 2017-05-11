@@ -1,22 +1,19 @@
 import axios from 'axios';
 
 const githubAxios = axios.create({
-  baseURL: 'https://api.github.com',
-  // baseURL: process.env.REACT_APP_EXPRESS_URL ? process.env.REACT_APP_EXPRESS_URL : "localhost:5000",
-  headers: {
-    Accept: 'application/vnd.github.v3+json',
-    Authorization: `token ${process.env.REACT_APP_GITHUB_TOKEN}`
-  }
+  //baseURL: 'https://api.github.com',
+  baseURL: process.env.NODE_ENV === 'production' ? process.env.REACT_APP_EXPRESS_URL : "http://localhost:5000"
 });
 
 export function searchGithub(searchTerm) {
-  return githubAxios.get(`/search/repositories?q=${searchTerm}`)
+  // These urls need encoded in the event they include special characters
+  return githubAxios.get(`/search/${encodeURIComponent(searchTerm)}`);
 }
 
 export function getContributing(repoName) {
-  return githubAxios.get(`/repos/${repoName}/contents/CONTRIBUTING.md`);
+  return githubAxios.get(`/contributing/${encodeURIComponent(repoName)}`);
 }
 
 export function getOpenIssues(repoName) {
-  return githubAxios.get(`/search/issues?q=repo:${repoName}+state:open+is:issue&per_page=15`);
+  return githubAxios.get(`/open_issues/${encodeURIComponent(repoName)}`);
 }
