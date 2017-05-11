@@ -14,11 +14,13 @@ function searchGithub(searchTerm) {
 }
 
 function getContributing(repoName) {
+  console.log(`Fetching data from Github API @ /repos/${repoName}/contents/CONTRIBUTING.md`)
   return githubAxios.get(`/repos/${repoName}/contents/CONTRIBUTING.md`);
 }
 
 function getOpenIssues(repoName) {
-  return githubAxios.get(`/search/issues?q=repo:${repoName}+state:open+is:issue&per_page=15`);
+  console.log(`Fetching data from Github API @ /search/issues?q=repo:${repoName}+state:open+type:issue&per_page=15`)
+  return githubAxios.get(`/search/issues?q=repo:${repoName}+state:open+type:issue&per_page=15`);
 }
 
 module.exports = {

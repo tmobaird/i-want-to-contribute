@@ -3,7 +3,9 @@ const logger = require('morgan');
 const path = require('path');
 const app = express();
 
-app.use(logger(':remote-addr - :remote-user [:date[clf]] ":method :url HTTP/:http-version" :status :res[content-length] :response-time ms'));
+const loggerType = process.env.NODE_ENV === 'production' ? 'common' : 'dev'
+app.use(logger(loggerType));
+
 // Accept CORS
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");

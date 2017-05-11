@@ -1,9 +1,9 @@
 const githubHelpers = require('./utils/githubHelper');
 
 module.exports = function(app){
-  app.get('/search/:searchTerm', function (req, res) {
-    const searchTerm = req.params.searchTerm;
-    console.log(searchTerm)
+  app.get('/search', function (req, res) {
+    const searchTerm = req.query.q;
+    console.log(`Searching for: ${searchTerm}`)
     githubHelpers.searchGithub(searchTerm)
       .then((response) => res.send(response.data))
   });

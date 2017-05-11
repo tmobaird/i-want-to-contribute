@@ -7,7 +7,7 @@ const githubAxios = axios.create({
 
 export function searchGithub(searchTerm) {
   // These urls need encoded in the event they include special characters
-  return githubAxios.get(`/search/${encodeURIComponent(searchTerm)}`);
+  return githubAxios.get(`/search?q=${encodeURIComponent(searchTerm)}`);
 }
 
 export function getContributing(repoName) {
