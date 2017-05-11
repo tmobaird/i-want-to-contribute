@@ -1,0 +1,1 @@
+web: BUNDLED_DEPLOY=true node src/server 
