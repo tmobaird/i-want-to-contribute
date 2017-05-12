@@ -3,6 +3,7 @@
 [![Build Status][build-status-badge]](https://travis-ci.org/tmobaird/i-want-to-contribute)
 [![Contributions Welcome][contributing-badge]](CONTRIBUTING.md)
 [![Netlify Deployed][netlify-deployed-badge]](https://i-want-to-contribute.netlify.com/)
+[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg?colorB=457dd8)](https://gitter.im/i-want-to-contribute/Lobby)
 
 **The app is currently up and running [here](https://i-want-to-contribute.netlify.com/)!**
 
