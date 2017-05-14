@@ -1,1 +1,1 @@
-web: (yarn run build && BUNDLED_DEPLOY=true node src/server)
+web: (REACT_APP_BUNDLED_DEPLOY=true yarn run build && REACT_APP_BUNDLED_DEPLOY=true node src/server)

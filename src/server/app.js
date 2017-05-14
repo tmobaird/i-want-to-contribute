@@ -15,7 +15,7 @@ app.use(function(req, res, next) {
 
 require('./routes')(app);
 
-if(process.env.BUNDLED_DEPLOY === 'true') {
+if(process.env.REACT_APP_BUNDLED_DEPLOY === 'true') {
   console.log("Bundling express server and static assets together")
   app.use(express.static(path.resolve(__dirname, '../..', 'build')));
   // Always return the main index.html, so react-router render the route in the client
