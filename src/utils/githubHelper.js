@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const apiUrl = () => {
-  if(process.env.BUNDLED_DEPLOY === 'true') {
+  if(process.env.REACT_APP_BUNDLED_DEPLOY === 'true') {
     return ""; // Uses relative path since client is being served from express server
   } else if(process.env.REACT_APP_EXPRESS_URL) {
     return process.env.REACT_APP_EXPRESS_URL; // Manually overridden URL
