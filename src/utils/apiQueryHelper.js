@@ -10,19 +10,19 @@ const apiUrl = () => {
   }
 }
 
-const githubAxios = axios.create({
+const expressAxios = axios.create({
   baseURL: apiUrl()
 });
 
 export function searchGithub(searchTerm) {
   // These urls need encoded in the event they include special characters
-  return githubAxios.get(`/search?q=${encodeURIComponent(searchTerm)}`);
+  return expressAxios.get(`/search?q=${encodeURIComponent(searchTerm)}`);
 }
 
 export function getContributing(repoName) {
-  return githubAxios.get(`/contributing/${encodeURIComponent(repoName)}`);
+  return expressAxios.get(`/contributing/${encodeURIComponent(repoName)}`);
 }
 
 export function getOpenIssues(repoName) {
-  return githubAxios.get(`/open_issues/${encodeURIComponent(repoName)}`);
+  return expressAxios.get(`/open_issues/${encodeURIComponent(repoName)}`);
 }
