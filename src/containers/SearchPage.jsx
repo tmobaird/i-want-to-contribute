@@ -25,6 +25,7 @@ export class SearchPage extends React.Component {
               show={this.props.search.submitted}
               searchTerm={this.props.search.submittedSearchTerm}
               fetchingInProgress={this.props.results.fetching}
+              sortedIds={this.props.results.sortedIds}
               results={this.props.results.data}
               getAdditionalInfo={this.props.actions.getAdditionalInfo}
             />

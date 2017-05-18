@@ -17,6 +17,7 @@ export default class SearchResultsBox extends React.Component {
           <h4>Search Results for <span className="text-primary">{ this.props.searchTerm }</span></h4>
           <SearchResultsList
             results={this.props.results}
+            sortedIds={this.props.sortedIds}
             getAdditionalInfo={this.props.getAdditionalInfo}
           />
         </div>
