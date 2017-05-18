@@ -13,7 +13,7 @@ const AppInfo = (props) => (
         <Col md={10} mdOffset={1} className="text-center app-info-sub-section-1">
           <h3>Find any project on Github</h3>
           <p>I Want To Contribute allows you to search for any project that exists on
-            github.com and will easily show you the contriubting info for the project, as well as some good places to start contributing.
+            github.com and will easily show you the contributing info for the project, as well as some good places to start contributing.
             We know contributing is hard, but is awesome at the same time! So we hope to welcome as many people we can, with open arms,
             to the open source community. If you have any suggestions for potential features to add, feel free to create an issue about it <a href="https://github.com/tmobaird/i-want-to-contribute/issues/new" target="_blank">here</a>!</p>
         </Col>
