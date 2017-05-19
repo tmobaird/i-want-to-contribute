@@ -7,9 +7,13 @@ module.exports = function(app){
 
   app.get('/search', function (req, res) {
     const searchTerm = req.query.q;
-    console.log(`Searching for: ${searchTerm}`)
-    githubHelpers.searchGithub(searchTerm)
-      .then((response) => res.send(response.data))
+    if(searchTerm) {
+      console.log(`Searching for: ${searchTerm}`)
+      githubHelpers.searchGithub(searchTerm)
+        .then((response) => res.send(response.data));
+    } else {
+      res.send("Request must include query param.")
+    }
   });
 
   app.get('/contributing/:repoName', function (req, res) {

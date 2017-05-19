@@ -1,29 +1,43 @@
 import request from 'supertest';
-const axios = require('axios');
-const MockAdapter = require('axios-mock-adapter');
-const githubHelpers = require('./utils/githubHelper');
+import express from 'express';
 
-
-// This sets the mock adapter on the default instance
-const mock = new MockAdapter(axios);
-const express = require('express');
 const app = express();
 require('./routes')(app);
 
 describe('Routes', () => {
   describe('/status', () => {
-    it('has /status endpoint', () => {
+    it('has 200 status code', () => {
       request(app)
         .get('/status')
-        .expect(200, "ok")
-        .end(function(err, res) {
-          if (err) throw err;
+        .then((res) => {
+          expect(res.status).toEqual(200);
+        });
+    });
+    it('has ok text', () => {
+      request(app)
+        .get('/status')
+        .then((res) => {
+          expect(res.text).toEqual("ok");
         });
     });
   });
   describe('/search', () => {
-    xit('returns json data', () => {
-      // todo
+    describe('when query params are undefined', () => {
+      it('returns 200 status', () => {
+        request(app)
+          .get('/search')
+          .then((res) => { expect(res.status).toEqual(200); });
+      });
+      it('returns text that request must include query params', () => {
+        request(app)
+          .get('/search')
+          .then((res) => { expect(res.text).toEqual("Request must include query param."); });
+      });
+    });
+    describe('when query params exist', () => {
+      xit('returns json data', () => {
+        // todo
+      });
     });
   });
   describe('/contributing/:repoName', () => {
