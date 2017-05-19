@@ -1,5 +1,5 @@
 import * as resultsActions from './resultsActionCreators';
-import { searchGithub, getContributing, getOpenIssues } from '../utils/githubHelper';
+import { searchGithub, getContributing, getOpenIssues } from '../utils/apiQueryHelper';
 import { parseOpenIssues } from '../utils/openIssuesParser';
 
 /*
