@@ -4,6 +4,7 @@ export default {
     submittedSearchTerm: "",
   },
   results: {
+    sortedIds: [],
     data: {},
     fetching: false
   }

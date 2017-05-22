@@ -18,3 +18,4 @@ If you make a contribution to this project, feel free to add your name to this l
 - David Shrestha ([@dshrest](https://github.com/dshrest))
 - Thomas Baird ([@tmobaird](https://github.com/tmobaird))
 - Paul Beccio ([@paulbeccio](https://github.com/paulbeccio)])
+- Zane Sandin ([@zasman](https://github.com/zasman))

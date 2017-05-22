@@ -10,7 +10,7 @@ export default function resultsReducer(state = initialState.results, action) {
       const updatedData = objectAssign({}, state.data, {[action.id]: result(state.data[action.id], action)});
       return objectAssign({}, state, {data: updatedData});
     case "RESULTS_DATA_UPDATE":
-      return objectAssign({}, state, {data: action.payload});
+      return objectAssign({}, state, {data: action.payload.results, sortedIds: action.payload.sortedIds});
     case "FETCHING_UPDATE":
       return objectAssign({}, state, {fetching: action.payload});
     default:

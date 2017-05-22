@@ -4,13 +4,18 @@
  */
 export function updateResults(data) {
   const items = data.items;
-  let result = {};
+  const results = {};
+  const sortedIds = []
   for (var i=0; i<items.length; i++) {
-    result[items[i].id] = items[i];
+    results[items[i].id] = items[i];
+    sortedIds.push(items[i].id);
   }
   return {
     type: "RESULTS_DATA_UPDATE",
-    payload: result
+    payload: {
+      sortedIds,
+      results
+    }
   }
 }
 
