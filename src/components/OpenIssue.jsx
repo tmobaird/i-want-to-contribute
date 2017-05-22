@@ -20,7 +20,7 @@ const OpenIssue = (props) => {
       <a href={props.data.html_url} target="_blank">
         <strong>{props.data.title}</strong> <small>{` #${props.data.number} `}</small>
       </a>
-      {labels}
+      { labels }
       <p className="created-at"><small>{`Opened ${moment(props.data.created_at).fromNow()}`}</small></p>
     </div>
   );
