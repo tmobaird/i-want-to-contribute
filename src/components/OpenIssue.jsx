@@ -17,7 +17,7 @@ const OpenIssue = (props) => {
 
   return (
     <div className={classes}>
-      <a href={props.data.html_url}>
+      <a href={props.data.html_url} target="_blank">
         <strong>{props.data.title}</strong> <small>{` #${props.data.number} `}</small>
       </a>
       { labels }
