@@ -1,7 +1,8 @@
 # I Want To Contribute
 
-[![Build Status][build-status-badge]](https://travis-ci.org/tmobaird/i-want-to-contribute)
 [![Contributions Welcome][contributing-badge]](CONTRIBUTING.md)
+[![Build Status][build-status-badge]](https://travis-ci.org/tmobaird/i-want-to-contribute)
+[![Current Version][current-version-badge]](https://github.com/tmobaird/i-want-to-contribute/releases)
 [![Netlify Deployed][netlify-deployed-badge]](https://i-want-to-contribute.netlify.com/)
 ![Heroku Deployed][heroku-deployed-badge]
 [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg?colorB=457dd8)](https://gitter.im/i-want-to-contribute/Lobby)
@@ -29,14 +30,17 @@ If you're looking to start contributing, it's probably best to first familiarize
 
 ### Some Libraries We're Currently Using
 
-- React (obviously)
-- Redux & React Redux
-- React Router & React Router Redux
-- Redux Thunk
-- Redux Logger
-- Axios
-- React bootstrap
-- Remarkable
+- [React](https://github.com/facebook/react) (obviously)
+- [Redux](https://github.com/reactjs/redux)
+- [Redux & React Redux](https://github.com/reactjs/react-redux)
+- [React Router](https://github.com/ReactTraining/react-router) & [React Router Redux](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-redux)
+- [Express](https://github.com/expressjs/express)
+- [Redux Thunk](https://github.com/gaearon/redux-thunk)
+- [Redux Logger](https://github.com/evgenyrodionov/redux-logger)
+- [Axios](https://github.com/mzabriskie/axios)
+- [React Bootstrap](https://github.com/react-bootstrap/react-bootstrap)
+- [Remarkable](https://github.com/jonschlinkert/remarkable)
+- [TinyColor2](https://github.com/bgrins/TinyColor)
 
 ### Want to Contribute?
 
@@ -48,3 +52,4 @@ If you'd like contribute, check out the [CONTRIBUTING](https://github.com/tmobai
 [contributing-badge]: https://img.shields.io/badge/contributions-welcome!-4BADFF.svg
 [netlify-deployed-badge]: https://img.shields.io/badge/netlify-deployed-00ad9f.svg
 [heroku-deployed-badge]: https://img.shields.io/badge/heroku-deployed-AE86DA.svg
+[current-version-badge]: https://img.shields.io/badge/version-1.1.0-FF566D.svg
