@@ -18,3 +18,14 @@
   font-weight: bold;
   font-size: 16px;
 }
+
+.navbar-link-right {
+  float: right;
+  margin-right: 1.5%;
+  color: black;
+}
+
+.navbar-link-right:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
