@@ -27,5 +27,5 @@
 
 .navbar-link-right:hover {
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.61);
+  opacity: 0.7;
 }
