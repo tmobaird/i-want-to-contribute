@@ -51,6 +51,18 @@
           "username": "AdamFreemer"
         }
       ]
+    },
+    {
+      "name": "Portugal",
+      "emoji": "doughnut",
+      "latitude": 40.6333333,
+      "longitude": -8.65,
+      "contributors": [
+        {
+          "name": "Ricardo Silva",
+          "username": "Ricardo-Silva91"
+        }
+      ]
     }
   ]
 }
