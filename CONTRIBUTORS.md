@@ -19,3 +19,7 @@ If you make a contribution to this project, feel free to add your name to this l
 - Thomas Baird ([@tmobaird](https://github.com/tmobaird))
 - Zane Sandin ([@zasman](https://github.com/zasman))
 - Paul Beccio ([@paulbeccio](https://github.com/paulbeccio))
+
+### Portugal :doughnut:
+
+- Ricardo Silva ([@Ricardo-Silva91](https://github.com/Ricardo-Silva91))
