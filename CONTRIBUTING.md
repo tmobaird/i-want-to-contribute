@@ -33,13 +33,15 @@ The last requirement is that you have a Github access token created. This is req
 From here, the token (a long string of characters) should be displayed to you. Copy the token, create a file named `.env` in this project's root and add this line to it:
 
 ```
-REACT_APP_GITHUB_TOKEN=<Your Github Token>
+GITHUB_TOKEN=<Your Github Token>
 
 ```
 
 (make sure you replace `<Your Github Token>` with the token you copied). Save that file, and make sure you DON'T commit it to git! This is your personal secret Github token.
 
 Voila! Your dev environment is all set up! You can now run `yarn start` to spin up your development server, which will redirect you to the app in your browser.
+
+_Note: For more information about the dev environment for this project, along with some other related topics, check out the [Developer Guide](docs/developer-guide/README.md) in the docs._
 
 #### Vagrant Environment
 
