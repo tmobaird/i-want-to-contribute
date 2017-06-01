@@ -1,5 +1,6 @@
 .NavigationBar {
-  margin-left: 15px;
+  margin-left: 0px;
+  margin-right: 0px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -19,13 +20,21 @@
   font-size: 16px;
 }
 
-.navbar-link-right {
+.navigation-bar-right .navbar-link {
   float: right;
-  margin-right: 1.5%;
   color: black;
 }
 
 .navbar-link-right:hover {
   text-decoration: none;
   opacity: 0.7;
+}
+
+.NavigationBar .githubLogo {
+  height: 24px;
+  width: 24px;
+}
+
+.find-me-on-github {
+  padding-right: 8px;
 }
