@@ -8,30 +8,89 @@ import { Col, Row } from 'react-bootstrap';
 import * as actions from '../actions/searchActionCreators';
 
 export class SearchPage extends React.Component {
+  constructor(props) {
+    super(props);
+    const params = new URLSearchParams(this.props.location.search);
 
-  showAppInfo() {
-    return this.props.search.submitted ? false : true;
+    this.state = {
+      searchTerm: params.get('q') ? params.get('q') : ''
+    }
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  componentDidMount() {
+    if (this.state.searchTerm !== '') {
+      this.props.actions.submitSearch(this.state.searchTerm);
+    }
+
+    if (this.props.history.action === 'PUSH') {
+      this.props.actions.resetSearch();
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (
+      (this.state.searchTerm !== prevState.searchTerm) &&
+      (this.state.searchTerm !== '')
+    ) {
+      this.props.actions.submitSearch(this.state.searchTerm);
+    }
+
+    if (
+      (this.state.searchTerm !== prevState.searchTerm) &&
+      (this.state.searchTerm === '')
+    ) {
+      this.props.actions.resetSearch();
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (
+      (this.state.searchTerm !== nextProps.location.search) &&
+      (nextProps.location.search !== '')
+    ) {
+      const params = new URLSearchParams(nextProps.location.search);
+      this.setState({searchTerm: params.get('q')})
+    }
+
+    if (
+      (this.state.searchTerm !== nextProps.location.search) &&
+      (nextProps.location.search === '')
+    ) {
+      this.setState({searchTerm: ''})
+    }
+  }
+
+  handleSubmit(query) {
+    this.props.history.push({ search: `q=${query}` })
   }
 
   render() {
+    const { submitted, submittedSearchTerm } = this.props.search
+    const { sortedIds, data, fetching } = this.props.results
+    const { getAdditionalInfo } = this.props.actions
+
     return (
         <div className="SearchPage">
           <Row>
             <Col xs={12} md={8} mdOffset={2}>
             <h1 className="text-center">I want to contribute to...</h1>
-            <SearchBar onSubmit={this.props.actions.submitSearch} />
+            <SearchBar
+              key={Math.random()}
+              onSubmit={this.handleSubmit} />
             <hr />
             <SearchResultsBox
-              show={this.props.search.submitted}
-              searchTerm={this.props.search.submittedSearchTerm}
-              fetchingInProgress={this.props.results.fetching}
-              sortedIds={this.props.results.sortedIds}
-              results={this.props.results.data}
-              getAdditionalInfo={this.props.actions.getAdditionalInfo}
+              show={submitted}
+              searchTerm={submittedSearchTerm}
+              fetchingInProgress={fetching}
+              sortedIds={sortedIds}
+              results={data}
+              getAdditionalInfo={getAdditionalInfo}
             />
             </Col>
           </Row>
-          { this.showAppInfo() && <AppInfo /> }
+          { submitted ? null : <AppInfo /> }
         </div>
     );
   }

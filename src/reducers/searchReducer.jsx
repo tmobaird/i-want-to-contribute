@@ -1,12 +1,13 @@
 import initialState from './initialState';
-import objectAssign from 'object-assign';
 
 export default function searchReducer(state = initialState.search, action) {
   switch (action.type) {
     case "SUBMITTED_UPDATE":
-      return objectAssign({}, state, {submitted: action.payload});
+      return {...state, submitted: action.payload};
     case "SUBMITTED_SEARCH_TERM_UPDATE":
-      return objectAssign({}, state, {submittedSearchTerm: action.payload});
+      return {...state, submittedSearchTerm: action.payload};
+    case "RESET_SEARCH":
+      return {...initialState.search};
     default:
       return state;
   }

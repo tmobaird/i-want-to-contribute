@@ -26,6 +26,10 @@ export function submitSearch(value) {
   };
 }
 
+export function resetSearch() {
+  return { type: 'RESET_SEARCH' }
+}
+
 export function getAdditionalInfo(id, repoName) {
   return function (dispatch) {
     dispatch(resultsActions.fetchingAddionalInfoStarted(id));
