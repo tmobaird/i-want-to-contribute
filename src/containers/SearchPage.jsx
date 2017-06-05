@@ -67,9 +67,9 @@ export class SearchPage extends React.Component {
   }
 
   render() {
-    const { submitted, submittedSearchTerm } = this.props.search
-    const { sortedIds, data, fetching } = this.props.results
-    const { getAdditionalInfo } = this.props.actions
+    const { submitted, submittedSearchTerm } = this.props.search;
+    const { sortedIds, data, fetching } = this.props.results;
+    const { getAdditionalInfo } = this.props.actions;
 
     return (
         <div className="SearchPage">
@@ -78,7 +78,8 @@ export class SearchPage extends React.Component {
             <h1 className="text-center">I want to contribute to...</h1>
             <SearchBar
               key={Math.random()}
-              onSubmit={this.handleSubmit} />
+              onSubmit={this.handleSubmit}
+            />
             <hr />
             <SearchResultsBox
               show={submitted}
