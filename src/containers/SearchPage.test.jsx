@@ -1,7 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import sinon from 'sinon';
-import 'url-search-params-polyfill';
 import { SearchPage } from './SearchPage';
 
 describe('SearchPage Container', () => {

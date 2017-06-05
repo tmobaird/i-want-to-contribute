@@ -33,7 +33,7 @@ If you're looking to start contributing, it's probably best to first familiarize
 - [React](https://github.com/facebook/react) (obviously)
 - [Redux](https://github.com/reactjs/redux)
 - [Redux & React Redux](https://github.com/reactjs/react-redux)
-- [React Router](https://github.com/ReactTraining/react-router) & [React Router Redux](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-redux)
+- [React Router](https://github.com/ReactTraining/react-router)
 - [Express](https://github.com/expressjs/express)
 - [Redux Thunk](https://github.com/gaearon/redux-thunk)
 - [Redux Logger](https://github.com/evgenyrodionov/redux-logger)
@@ -52,4 +52,4 @@ If you'd like contribute, check out the [CONTRIBUTING](https://github.com/tmobai
 [contributing-badge]: https://img.shields.io/badge/contributions-welcome!-4BADFF.svg
 [netlify-deployed-badge]: https://img.shields.io/badge/netlify-deployed-00ad9f.svg
 [heroku-deployed-badge]: https://img.shields.io/badge/heroku-deployed-AE86DA.svg
-[current-version-badge]: https://img.shields.io/badge/version-1.1.0-FF566D.svg
+[current-version-badge]: https://img.shields.io/badge/version-1.2.0-FF566D.svg
