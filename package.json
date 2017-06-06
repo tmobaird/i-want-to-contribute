@@ -25,7 +25,8 @@
     "redux-logger": "2.8.2",
     "redux-thunk": "2.1.0",
     "remarkable": "1.7.1",
-    "tinycolor2": "^1.4.1"
+    "tinycolor2": "^1.4.1",
+    "url-search-params": "^0.9.0"
   },
   "devDependencies": {
     "enzyme": "^2.8.2",
@@ -34,8 +35,7 @@
     "react-test-renderer": "15.4.2",
     "redux-immutable-state-invariant": "1.2.4",
     "sinon": "^2.3.2",
-    "supertest": "^3.0.0",
-    "url-search-params-polyfill": "^1.2.0"
+    "supertest": "^3.0.0"
   },
   "scripts": {
     "start": "nf start -j Procfile.dev",

@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import URLSearchParams from 'url-search-params';
 import SearchBar from '../components/SearchBar';
 import SearchResultsBox from '../components/SearchResultsBox';
 import AppInfo from '../components/AppInfo';

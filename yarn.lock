@@ -5551,9 +5551,9 @@ url-parse@^1.0.1, url-parse@^1.1.1:
     querystringify "0.0.x"
     requires-port "1.0.x"
 
-url-search-params-polyfill@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/url-search-params-polyfill/-/url-search-params-polyfill-1.2.0.tgz#ad8150c701cd2005c2e8cc20ab5b683dd0372b16"
+url-search-params@^0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/url-search-params/-/url-search-params-0.9.0.tgz#e71d7764a6503533cbfe9771b2963cb61ea1c225"
 
 url@^0.11.0:
   version "0.11.0"
