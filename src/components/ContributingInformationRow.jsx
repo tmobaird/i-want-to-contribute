@@ -1,14 +1,14 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
-
 import Remarkable from 'remarkable';
+import { base64ToUTF8 } from '../utils/encodingHelper';
 
 const md = new Remarkable();
 
 export default class ContributingInformationRow extends React.Component {
   getContributingContent() {
     if(this.props.data) {
-      let text = atob(this.props.data.content);
+      let text = base64ToUTF8(this.props.data.content);
       var shortText = text.substring(0,500); // Limits the characters to display to 500
       return md.render(shortText + `\n\n**Read the full guide [here](${this.props.data.html_url}).**`);
     } else {
