@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import NavigationBar from './NavigationBar';
 import '../styles/App.css';
+import '../styles/bootstrap-overrides.css';
 
 class App extends Component {
   render() {
