@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from '../actions/searchActionCreators';
-import SearchBar from '../components/SearchBar';
+import SearchForm from '../components/SearchForm';
 import SearchResultsBox from '../components/SearchResultsBox';
 import AppInfo from '../components/AppInfo';
 import { Col, Row } from 'react-bootstrap';
@@ -77,7 +77,7 @@ export class SearchPage extends React.Component {
           <Row>
             <Col xs={12} md={8} mdOffset={2}>
             <h1 className="text-center">I want to contribute to...</h1>
-            <SearchBar
+            <SearchForm
               key={Math.random()}
               onSubmit={this.handleSubmit}
             />

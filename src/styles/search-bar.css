@@ -1,14 +1,61 @@
-#search-bar {
-  font-size: 20px;
-  width: 100%;
-  padding: 12px 20px;
+.search-bar {
+  cursor: text;
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  border: 1px solid #DDDDDD;
+
   margin: 8px 0;
+  width: 100%;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
 }
 
+.search-bar.focus {
+  /* Still not sure which color yet
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  border: 1px solid rgba(81, 203, 238, 1);*/
+  box-shadow: 0 0 5px #A64CFF;
+  border: 1px solid #A64CFF;
+}
+
+.search-bar-input {
+  display: inline-block;
+  border-radius: 4px;
+  font-size: 20px;
+  border: none;
+  width: 80%;
+  height: 100%;
+  padding: 12px 20px;
+}
+
+.search-bar-input:focus {
+  outline: none;
+}
+
 #search-bar::-webkit-input-placeholder {
   font-size: 20px;
+}
+
+ .search-bar .help-link {
+  display: inline-block;
+  color: #60B7FF;
+  /*border: 1px solid green;*/
+  text-align: center;
+  padding: 12px 20px;
+  vertical-align: middle;
+  float: right;
+ }
+
+ .vertical-center {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+
+.help-link .glyphicon {
+  cursor: pointer;
 }
