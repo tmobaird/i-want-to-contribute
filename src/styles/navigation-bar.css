@@ -38,3 +38,7 @@
 .find-me-on-github {
   padding-right: 8px;
 }
+
+.find-me-on-github-link:hover {
+  opacity: 0.7;
+}

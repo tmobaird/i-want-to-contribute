@@ -29,7 +29,7 @@ class NavigationBar extends Component {
             >Contributors</NavLink>
         </Col>
         <Col md={6} sm={5} xs={12} className="navigation-bar-right">
-            <a href="https://github.com/tmobaird/i-want-to-contribute" className="navbar-link">
+            <a href="https://github.com/tmobaird/i-want-to-contribute" className="navbar-link find-me-on-github-link">
               <span className="find-me-on-github">Find me on Github</span><img alt="Github" className="githubLogo" src={githubLogo} />
             </a>
         </Col>
