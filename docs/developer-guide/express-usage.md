@@ -2,10 +2,9 @@
 
 ![Contributions Welcome][contributing-badge] ![In Progress][in-progress-badge]
 
-
 Shortly after the initial release of this application a big time security vulnerability was found within the app.
 
-For those of you who don't know, this app uses [create-react-app]() as a react framework/boilerplate to help abstract away some of the more complex, repetitive configurations commonly used for react applications (ie. Webpack). Create-react-app is an awesome project, they have a ton of neat utilities baked in that dramatically help enhance the developer experience as well as your project's configuration.
+For those of you who don't know, this app uses [create-react-app](https://github.com/facebookincubator/create-react-app) as a react framework/boilerplate to help abstract away some of the more complex, repetitive configurations commonly used for react applications (ie. Webpack). Create-react-app is an awesome project, they have a ton of neat utilities baked in that dramatically help enhance the developer experience as well as your project's configuration.
 
 Create-react-app has a very neat strategy for handling environment variables. In short, any environment variable defined with the prefix `REACT_APP` can be used in your app using the normal `process.env.REACT_APP_ENV_VAR_NAME` style.
 
@@ -21,7 +20,7 @@ This is a huge problem for this app due to the use of a Github access token. If 
 
 ### Express To The Rescue
 
-This is the exact point where [Express]() came in to save the day. For those of you who don't know, ExpressJS is a framework that allows you to easily create web servers with RESTful endpoints.
+This is the exact point where [Express](https://expressjs.com/) came in to save the day. For those of you who don't know, ExpressJS is a framework that allows you to easily create web servers with RESTful endpoints.
 
 Express was the exact solution we needed because we could take our Github token environment out of the client side entirely and move it to the express server. Much safer! At the same time we could create a web server with a given set of endpoints required for all the queries we make to Github. This really allows to isolate the logic that is required when handling data fetching from the Github API.
 
