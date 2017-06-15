@@ -1,10 +1,10 @@
 # Setting Up Your Environment
 
-![Contributions Welcome][contributing-badge] ![Under Review][under-review-badge]
+![Contributions Welcome][contributing-badge]
 
 One of the main goals of this project is to make getting work done, as easy as possible for developers. That's why we chose [create-react-app]() as our react boilerplate. create-react-app really makes it easy to not have to worry about all the others things that generally go into react development (babel, webpack, etc.), and allow developers to focus on development.
 
-If you've already read the [Contributing Guide]() then you've probably read most of this already, but here's how you set up your environment for this project.
+If you've already read the [Contributing Guide](https://github.com/tmobaird/i-want-to-contribute/blob/master/CONTRIBUTING.md) then you've probably read most of this already, but here's how you set up your environment for this project.
 
 ### Set Up
 
@@ -31,7 +31,6 @@ From here, the token (a long string of characters) should be displayed to you. C
 
 ```
 GITHUB_TOKEN=<Your Github Token>
-
 ```
 
 (make sure you replace `<Your Github Token>` with the token you copied). Save that file, and make sure you DON'T commit it to git! This is your personal secret Github token.

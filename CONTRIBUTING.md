@@ -34,7 +34,6 @@ From here, the token (a long string of characters) should be displayed to you. C
 
 ```
 GITHUB_TOKEN=<Your Github Token>
-
 ```
 
 (make sure you replace `<Your Github Token>` with the token you copied). Save that file, and make sure you DON'T commit it to git! This is your personal secret Github token.
