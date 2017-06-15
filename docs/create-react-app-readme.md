@@ -728,7 +728,7 @@ life of the shell session.
 
 #### Windows (cmd.exe)
 
-```cmd
+```sh
 set REACT_APP_SECRET_CODE=abcdef&&npm start
 ```
 
@@ -834,7 +834,7 @@ To do this, set the `HTTPS` environment variable to `true`, then start the dev s
 
 #### Windows (cmd.exe)
 
-```cmd
+```sh
 set HTTPS=true&&npm start
 ```
 
@@ -1101,11 +1101,11 @@ script:
 ### On your own environment
 ##### Windows (cmd.exe)
 
-```cmd
+```sh
 set CI=true&&npm test
 ```
 
-```cmd
+```sh
 set CI=true&&npm run build
 ```
 

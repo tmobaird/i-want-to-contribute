@@ -10,6 +10,7 @@ If you'd like to contribute, check out the currently open issues. Generally thos
 - [Doc Changes](#doc-changes)
 - [General Non-Doc Contribution Flow](#general-non-doc-contribution-flow)
 - [Running Tests](#running-tests)
+- [Getting Credit for Your Contributions](#getting-credit-for-your-contributions)
 
 ### Setting Up Your Dev Environment
 
@@ -60,9 +61,11 @@ When making doc changes, we want to use relative URL paths for references to oth
 
 Examples:
 
-Referencing to doc files, use a relative URL path like: [create-react-app-readme](docs/create-react-app-readme.md).
+Referencing to doc files, use a relative URL path like: `[create-react-app-readme](docs/create-react-app-readme.md)`.
 
-Referencing source code files, use a full url path like: [src/components/SearchBar.jsx]().
+Referencing source code files, use a full url path like: `[SearchBar.jsx](https://github.com/tmobaird/i-want-to-contribute/blob/master/src/components/SearchBar.jsx)`.
+
+The doc book for this project currently lives as a GitBook [here](https://tmobaird.gitbooks.io/i-want-to-contribute/). All doc files should be optimized for GitBook, using normal Markdown Syntax ([Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)).
 
 ### General Non-Doc Contribution Flow
 
@@ -98,3 +101,88 @@ And some other helpful resources:
 
 - [Jest](https://facebook.github.io/jest/)
 - [Enzyme](https://github.com/airbnb/enzyme)
+
+## Getting Credit for Your Contributions
+
+Since this project is all about helping people contribute to open source projects, we love to show off the awesome people that have helped out with this app. To do that, we have two different docs/files that include information about our contributors and the places they are from!
+
+- [CONTRIBUTORS.md](https://github.com/tmobaird/i-want-to-contribute/blob/master/CONTRIBUTORS.md)
+- [contributors.json](https://github.com/tmobaird/i-want-to-contribute/blob/master/src/utils/contributors.json)
+
+**`CONTRIBUTORS.md`** is a simple markdown doc that includes a list of locations around the world with a list of contributors from those locations.
+
+**`contributors.json`** is almost the same as the markdown doc, but is a JSON data set. Essentially it is just an Object with the attribute locations that consists of an array of location objects that include basic location information as well as an array of contributors.
+
+When adding a new location in either of these files feel free to add them by city, state, or even country! It's entirely up to you! _Also if you'd like to get credit for your work in this fashion without disclosing your location, feel free to add an anonymous location to these lists. It's awesome to track our contributors' locations, but if you don't feel comfortable disclosing that information, there should be no pressure to include that!_
+
+[Here's what our live Contributors Map currently looks like!](https://i-want-to-contribute.netlify.com/contributors)
+
+#### Updating `CONTRIBUTORS.md`
+
+If your location exists, simply add a new bullet to that section with your name followed by your Github username as a link to your Github profile. Example:
+
+ > - Thomas Baird ([@tmobaird](https://github.com/tmobaird))
+
+ **Raw Markdown**:
+
+```markdown
+- Thomas Baird ([@tmobaird](https://github.com/tmobaird))
+```
+
+If your location does not exist on the list, feel free to add it! If there's any emoji you can think of that is appropriate for your location, feel free to add that as well! Example:
+
+> ### Virginia :icecream:
+>
+> - Thomas Baird ([@tmobaird](https://github.com/tmobaird))
+
+ **Raw Markdown**:
+
+```markdown
+### Virginia :emoji_name:
+
+- Thomas Baird ([@tmobaird](https://github.com/tmobaird))
+```
+
+#### Updating `contributors.json`
+
+The contributors.json data set is a JSON object that includes the property `locations` which is an array of locations for all the places our contributors come from. Each location has a set of properties, those being:
+
+- name `<String>`
+- emoji `<String>`
+- latitude `<Number>`
+- longitude `<Number>`
+- contributors `<Array>`
+
+An example JSON object for a location looks something like:
+
+```json
+{
+    "name": "Virginia",
+    "emoji": "icecream",
+    "latitude": 37.4316,
+    "longitude": -78.6569,
+    "contributors": []
+}
+```
+
+When creating a new location, make sure you include the longitude and latitude of this location (this is what allows us to place markers on our map in these locations). In regards to these values, north (latitude) and east (longitude) coordinates should always be positive values, whereas south (latitude) and west (longitude) should always be negative values. Example:
+
+    Virginia: 37.4316° N, 78.6569° W -> latitude: 37.4316, longitude: -78.6569  
+
+When adding yourself as a contributor to a location, add a new contributor object to that location's contributors array. A contributor has the following properties:
+
+- name `<String>`: This is your name (ex. Thomas Baird)
+- username `<String>`: This is your github username handle (ex. tmobaird)
+
+An example contributor object should look something as follows:
+
+```json
+{
+    "name": "Thomas Baird",
+    "username": "tmobaird"
+}
+```
+
+If anything about this process of adding yourself to the contributors lists was hard to understand, feel free to create a Github issue for clarification or post a message for help in our Gitter channel here:
+
+[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg?colorB=FF4C8D)](https://gitter.im/i-want-to-contribute/Lobby)

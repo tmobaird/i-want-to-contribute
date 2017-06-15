@@ -1,6 +1,7 @@
 # Welcome to the Docs!
 
 ![Contributions Welcome][contributing-badge]
+[![Read Gitbook][gitbook-badge]](https://tmobaird.gitbooks.io/i-want-to-contribute/)
 
 This doc guide includes information about an array of different topics related to React development.
 
@@ -67,6 +68,7 @@ A big kudos to all the contributors. You all are awesome!
 [coming-soon-badge]: https://img.shields.io/badge/coming-soon!-FF6262.svg
 [in-progress-badge]: https://img.shields.io/badge/in-progress-EDE128.svg
 [under-review-badge]: https://img.shields.io/badge/under-review-C486FF.svg
+[gitbook-badge]: https://img.shields.io/badge/read-gitbook-3884ff.svg
 [contributions-icon]: images/contributions-icon.png
 [in-progress-icon]: images/in-progress-icon.png
 [todo-icon]: images/todo-icon.png
