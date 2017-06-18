@@ -39,7 +39,7 @@ _Note: If you'd like a much easier way to test out these examples locally, check
 
 To fully understand how to use React & React DOM work and how to use them, it's best to start with a basic example. This example is straight from Facebook's documentation:
 
-```JavaScript
+```javascript
 ReactDOM.render(
   <h1>Hello World</h1>,
   document.getElementById('root')

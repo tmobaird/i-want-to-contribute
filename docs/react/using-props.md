@@ -9,13 +9,13 @@ There are two different perspectives from which we need to learn how to use reac
 
 JSX is awesome. It allows you to inline the props you pass to a component. These work very similarly to how HTML attributes work. Example:
 
-```JavaScript
+```javascript
 <MessageComponent headerText="Hello" bodyText="World" />
 ```
 
 In this case, `MessageComponent` would receive props that might look something like this:
 
-```JavaScript
+```javascript
 {
   headerText: "Hello",
   bodyText: "World"
@@ -24,7 +24,7 @@ In this case, `MessageComponent` would receive props that might look something l
 
 You can pass anything you want in props. Strings, Numbers, Objects, Arrays, etc. For example, if you had an array of items you wanted to display in a list component, you could pass them like this:
 
-```JavaScript
+```javascript
 const messages = ["Hello", "Hola", "Hi", "Howdy"];
 <MessageList messages={messages} />
 ```

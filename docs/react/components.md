@@ -9,7 +9,7 @@ Components are the :heart: of React. They are also a big reason as to why React 
 
 When creating your app, it can be very easy to simply create one component and throw everything inside it in raw form. And yeah, that would work, but that can become incredibly tedious as an app grows in size. The render content will continue to grow with all different sorts of data and presentational information mashed in. For example, say you have a page that displays a list of movies to the user. It'll display the title, year it was released, and genre. That might look something like this:
 
-```JavaScript
+```javascript
 const moviesList = movies.map((m,i) => {
   return <li>{ `${m.title} (${m.year}: ${m.genre})` }</li>;
 });
@@ -21,7 +21,7 @@ const moviesList = movies.map((m,i) => {
 
 Something like this would work for displaying our list of movies, but what if I wanted to style each item in the list? Or what if I wanted to add some styling to the list as a whole? Now we could have something like this:
 
-```JavaScript
+```javascript
 const moviesList = movies.map((m,i) => {
   return <li style={{padding: "5px", borderBottom: "2px solid black"}}>{ `<strong style="font-size: 16px; color: red">${m.title}</strong> (${m.year}): <p>${m.genre}</p>` }</li>;
 });

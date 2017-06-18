@@ -5,7 +5,8 @@
 [![Current Version][current-version-badge]](https://github.com/tmobaird/i-want-to-contribute/releases)
 [![Netlify Deployed][netlify-deployed-badge]](https://i-want-to-contribute.netlify.com/)
 ![Heroku Deployed][heroku-deployed-badge]
-[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg?colorB=457dd8)](https://gitter.im/i-want-to-contribute/Lobby)
+[![Read Gitbook][gitbook-badge]](https://tmobaird.gitbooks.io/i-want-to-contribute/)
+[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg?colorB=FF4C8D)](https://gitter.im/i-want-to-contribute/Lobby)
 
 **The app is currently up and running [here](https://i-want-to-contribute.netlify.com/)!**
 
@@ -53,3 +54,4 @@ If you'd like contribute, check out the [CONTRIBUTING](https://github.com/tmobai
 [netlify-deployed-badge]: https://img.shields.io/badge/netlify-deployed-00ad9f.svg
 [heroku-deployed-badge]: https://img.shields.io/badge/heroku-deployed-AE86DA.svg
 [current-version-badge]: https://img.shields.io/badge/version-1.2.0-FF566D.svg
+[gitbook-badge]: https://img.shields.io/badge/read-gitbook-3884ff.svg

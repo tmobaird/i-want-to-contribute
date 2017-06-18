@@ -11,7 +11,7 @@ The simple answer: React's **Props**.
 
 Props are essentially data that is passed to a component and can then be used by that component. This makes data flow very straightforward. You can pass props to any react component, and you can even type check the props that are passed to a given component. An easier way to think of props is that they are incredibly similar to how function arguments work. For example, when you pass an argument to a method, that method then has access to those arguments. Ex:
 
-```JavaScript
+```javascript
 function sum(a, b) {
   return a + b;
 }
