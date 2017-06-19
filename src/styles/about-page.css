@@ -1,0 +1,32 @@
+.text-bright-blue {
+  color: #4CA8FF;
+}
+
+.text-black {
+  color: black;
+}
+
+.text-purple {
+  color: #A64CFF;
+}
+
+p.about-text {
+  font-size: 16px;
+}
+
+blockquote.helping-others {
+  font-size: 24px;
+  line-height: 30px;
+  border-left: 5px solid #4CA8FF;
+}
+
+img.react-img {
+  height: 24px;
+  width: 24px;
+  margin-left: 5px;
+}
+
+hr.compact {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
