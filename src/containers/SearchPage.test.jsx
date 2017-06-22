@@ -28,6 +28,19 @@ describe('SearchPage Container', () => {
     expect(wrapper.find('AppInfo').exists()).toBe(true);
   });
 
+  it('does not render SearchResultsBox component if search is not active', () => {
+    const wrapper = shallow(
+      <SearchPage
+        search={{ submitted: false }}
+        results={{}}
+        actions={{}}
+        location={{search: ''}}
+      />
+    );
+
+    expect(wrapper.find('SearchResultsBox').exists()).toBe(false);
+  });
+
   it('displays SearchResultsBox component if search is active', () => {
     const wrapper = shallow(
       <SearchPage

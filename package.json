@@ -11,6 +11,7 @@
     "foreman": "^2.0.0",
     "halogen": "0.2.0",
     "leaflet": "^1.0.3",
+    "lodash": "^4.17.4",
     "moment": "^2.18.1",
     "morgan": "^1.8.1",
     "object-assign": "4.1.0",

@@ -73,27 +73,31 @@ export class SearchPage extends React.Component {
     const { getAdditionalInfo } = this.props.actions;
 
     return (
-        <div className="SearchPage">
-          <Row>
-            <Col xs={12} md={8} mdOffset={2}>
+      <div className="SearchPage">
+        <Row>
+          <Col xs={12} md={8} mdOffset={2}>
             <h1 className="text-center">I want to contribute to...</h1>
             <SearchForm
               key={Math.random()}
               onSubmit={this.handleSubmit}
             />
             <hr />
-            <SearchResultsBox
-              show={submitted}
-              searchTerm={submittedSearchTerm}
-              fetchingInProgress={fetching}
-              sortedIds={sortedIds}
-              results={data}
-              getAdditionalInfo={getAdditionalInfo}
-            />
+          </Col>
+        </Row>
+        { submitted ? (
+          <Row>
+            <Col xs={12} md={8} mdOffset={2}>
+              <SearchResultsBox
+                searchTerm={submittedSearchTerm}
+                fetchingInProgress={fetching}
+                sortedIds={sortedIds}
+                results={data}
+                getAdditionalInfo={getAdditionalInfo}
+              />
             </Col>
           </Row>
-          { submitted ? null : <AppInfo /> }
-        </div>
+        ) : <AppInfo /> }
+      </div>
     );
   }
 }
