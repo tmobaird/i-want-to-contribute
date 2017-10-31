@@ -3,6 +3,11 @@ import ContributorsMap from './contributors-map/ContributorsMap';
 import contributorsByLocation from '../utils/contributors.json';
 
 export default class ContributorsPage extends React.Component {
+  constructor(props) {
+    super(props);
+    document.title = "Contributors  |  IWantToContribute";
+  }
+
   render() {
     return (
       <div className='contributors-page'>
