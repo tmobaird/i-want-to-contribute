@@ -11,6 +11,7 @@ import 'url-search-params-polyfill';
 export class SearchPage extends React.Component {
   constructor(props) {
     super(props);
+    document.title = "Home  |  IWantToContribute";
     const params = new URLSearchParams(this.props.location.search);
 
     this.state = {
