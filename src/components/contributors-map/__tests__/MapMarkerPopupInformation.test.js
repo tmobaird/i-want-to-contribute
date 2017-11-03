@@ -1,13 +1,20 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import sinon from 'sinon';
 import MapMarkerPopupInformation from '../MapMarkerPopupInformation';
 
 describe('MapMarkerPopupInformation', () => {
   describe('when no location prop exists', () => {
     it('raises error when rendering', () => {
+      // stubs console.error to prevent rendering in the terminal
+      const stub = sinon.stub(console, 'error');
+
       expect(() => {
         shallow(<MapMarkerPopupInformation />);
-      }).toThrow();
+      }).toThrow(new TypeError("Cannot read property 'name' of undefined"));
+      expect(stub.calledOnce).toEqual(true);
+
+      console.error.restore();
     });
   });
   describe('with props', () => {
