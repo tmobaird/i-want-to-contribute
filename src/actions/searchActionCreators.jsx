@@ -1,6 +1,8 @@
 import * as resultsActions from './resultsActionCreators';
 import { searchGithub, getContributing, getOpenIssues } from '../utils/apiQueryHelper';
 import { parseOpenIssues } from '../utils/openIssuesParser';
+import ContributingInformation from "../models/ContributingInformation";
+import Repo from "../models/Repo";
 
 /*
  * The action creators in the file will modify all of the parts of the redux state
@@ -30,7 +32,7 @@ export function resetSearch() {
   return { type: 'RESET_SEARCH' }
 }
 
-export function getAdditionalInfo(repo) {
+export function getAdditionalInfo(repo: Repo) {
   const id = repo.id;
   const repoName = repo.fullName;
   return function (dispatch) {
@@ -38,7 +40,11 @@ export function getAdditionalInfo(repo) {
     setTimeout(() => {
       Promise.all([
         getContributing(repoName)
-          .then((response) => dispatch(resultsActions.updateResultContributing(id, response.data)))
+          .then((response) => {
+            const {content, html_url, name} = response.data;
+            repo.contributingInformation = new ContributingInformation({htmlUrl: html_url, name, content});
+            dispatch(resultsActions.updateResultContributing(repo));
+          })
           .catch((err) => dispatch(resultsActions.updateResultContributing(id, err.response.data))),
         getOpenIssues(repoName)
           .then((response) => { return parseOpenIssues(response.data.items) })

@@ -1,8 +1,8 @@
 /*
  * The following are the labels we have deemed should be searched for.
  */
-const goodLabels = ["contributions welcome", "contributions: up for grabs", "contributions: up for grabs!", "help needed", "help wanted", "easy"]
-const badLabels = ["in progress", "claimed", "contributions: claimed"]
+const goodLabels = ["contributions welcome", "contributions: up for grabs", "contributions: up for grabs!", "help needed", "help wanted", "easy"];
+const badLabels = ["in progress", "claimed", "contributions: claimed"];
 
 export function parseOpenIssues(issues) {
   let suggestedIssues = [];

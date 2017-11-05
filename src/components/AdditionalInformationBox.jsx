@@ -13,7 +13,7 @@ export default class AdditionalInformationBox extends React.Component {
           <Loader color="#4BCEFF" size="70px" />
         </Col>
       );
-    } else if(this.props.data) {
+    } else if(this.props.data.contributing && this.props.data.additionalInformation) {
       return (
         <div>
           <ContributingInformationRow data={this.props.data.contributing} />
