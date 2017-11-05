@@ -5,7 +5,12 @@ import ResultStatsRow from './ResultStatsRow';
 import AdditionalInformationBox from './AdditionalInformationBox';
 import '../styles/search-result.css';
 
-export default class SearchResult extends React.Component {
+interface Props {
+  data: Repo,
+  getAdditionalInfo: (x: Repo) => void
+}
+
+export default class SearchResult extends React.Component<Props> {
   constructor(props) {
     super(props);
     this.state = {};
@@ -27,19 +32,21 @@ export default class SearchResult extends React.Component {
   }
 
   render() {
+    const repo = this.props.data;
+
     return (
       <Row>
         <Panel>
-          <a href={this.props.data.htmlUrl}><h3>{ this.props.data.fullName }</h3></a>
-          <p><Emojify style={{height: 20, width: 20}}>{ this.props.data.description }</Emojify></p>
-          <ResultStatsRow data={this.props.data} />
+          <a href={repo.htmlUrl}><h3>{ repo.fullName }</h3></a>
+          <p><Emojify style={{height: 20, width: 20}}>{ repo.description }</Emojify></p>
+          <ResultStatsRow data={repo} />
           <Row style={{marginRight: "5px"}}>
             <a className='pull-right' onClick={this.handleExpandCollapse} style={{cursor: 'pointer'}}>Learn how you can help!</a>
           </Row>
           <Collapse in={this.state.open}>
             <div>
               <hr style={{ width: "90%"}} />
-              <AdditionalInformationBox fetching={this.props.data.fetchingAdditional} data={this.props.data.additionalInformation} />
+              <AdditionalInformationBox fetching={repo.fetchingAdditional} data={{contributing: repo.contributingInformation, additionalInformation: repo.additionalInformation}} />
             </div>
           </Collapse>
         </Panel>

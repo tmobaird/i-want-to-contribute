@@ -1,29 +1,68 @@
-class Repo {
-  constructor(data) {
-    this.contributorsUrl = data.contributors_url;
-    this.createdAt = data.created_at;
-    this.description = data.description;
-    this.forks = data.forks;
-    this.forksCount = data.forks_count;
-    this.forksUrl = data.forks_url;
-    this.fullName = data.full_name;
-    this.git_Url = data.git_url;
-    this.hasIssues = data.has_issues;
-    this.hasPages = data.has_pages;
-    this.homepage = data.homepage;
-    this.htmlUrl = data.html_url;
-    this.id = data.id;
-    this.issuesUrl = data.issues_url;
-    this.language = data.language;
-    this.name = data.name;
-    this.openIssues = data.open_issues;
-    this.openIssuesCount = data.open_issues_count;
-    this.stargazersCount = data.stargazers_count;
-    this.updatedAt = data.updated_at;
-    this.url = data.url;
-    this.watchers = data.watchers;
-    this.watchersCount = data.watchers_count;
-  }
+// @flow
+import AdditionalInformation from './AdditionalInformation';
+import {License} from '../serializers/RepoSerializer';
+import ContributingInformation from "./ContributingInformation";
+
+interface RepoAttributes {
+  contributorsUrl: string;
+  createdAt: string;
+  description: string;
+  forks: number;
+  forksCount: number;
+  forksUrl: string;
+  fullName: string;
+  gitUrl: string;
+  hasIssues: boolean;
+  hasPages: boolean;
+  homepage: string;
+  htmlUrl: string;
+  id: number;
+  issuesUrl: string;
+  language: string;
+  license: License;
+  name: string;
+  openIssues: number;
+  openIssuesCount: number;
+  score: number;
+  sshUrl: string;
+  stargazersCount: number;
+  updatedAt: string;
+  url: string;
+  watchers: number;
+  watchersCount: number;
 }
 
-export default Repo;
+export default class Repo {
+  contributorsUrl: string;
+  contributingInformation: ContributingInformation | null;
+  createdAt: string;
+  description: string;
+  forks: number;
+  forksCount: number;
+  forksUrl: string;
+  fullName: string;
+  gitUrl: string;
+  hasIssues: boolean;
+  hasPages: boolean;
+  homepage: string;
+  htmlUrl: string;
+  id: number;
+  issuesUrl: string;
+  language: string;
+  license: License;
+  name: string;
+  openIssues: number;
+  openIssuesCount: number;
+  score: number;
+  sshUrl: string;
+  stargazersCount: number;
+  updatedAt: string;
+  url: string;
+  watchers: number;
+  watchersCount: number;
+  additionalInformation: AdditionalInformation | null;
+
+  constructor(data: RepoAttributes) {
+    Object.assign(this, data)
+  }
+}

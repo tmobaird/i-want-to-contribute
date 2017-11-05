@@ -1,9 +1,12 @@
 import initialState from './initialState';
 import objectAssign from 'object-assign';
+import Repo from "../models/Repo";
 
 export default function resultsReducer(state = initialState.results, action) {
   switch (action.type) {
     case "RESULT_CONTRIBUTING_UPDATE":
+      const updated = objectAssign({}, state.data, {[action.id]: result(state.data[action.id], action)});
+      return objectAssign({}, state, {data: updated});
     case "RESULT_FETCHING_ADDITIONAL_INFO_UPDATE":
     case "RESULT_OPEN_ISSUES_UPDATE":
     case "RESULT_SUGGESTED_ISSUES_UPDATE":
@@ -19,13 +22,25 @@ export default function resultsReducer(state = initialState.results, action) {
 }
 
 function result(state, action) {
+  let props, issues;
+
   switch(action.type) {
     case "RESULT_CONTRIBUTING_UPDATE":
+      console.log('updating contributing');
+      return action.payload;
     case "RESULT_OPEN_ISSUES_UPDATE":
+      issues = Object.assign({}, state.additionalInformation, { openIssues: action.payload });
+      props = Object.assign({}, state, { additionalInformation: issues });
+      return new Repo(props);
     case "RESULT_SUGGESTED_ISSUES_UPDATE":
-      return objectAssign({}, state, { additionalInformation: additionalInformation(state.additionalInformation, action) });
+      console.log('updating suggested');
+      issues = Object.assign({}, state.additionalInformation, { suggestedIssues: action.payload });
+      props = Object.assign({}, state, { additionalInformation: issues });
+      return new Repo(props);
+      // return objectAssign({}, state, { additionalInformation: additionalInformation(state.additionalInformation, action) });
     case "RESULT_FETCHING_ADDITIONAL_INFO_UPDATE":
-      return objectAssign({}, state, { fetchingAdditional: action.payload });
+      props = Object.assign({}, state, {fetchingAdditional: action.payload});
+      return new Repo(props);
     default:
       return state;
   }
