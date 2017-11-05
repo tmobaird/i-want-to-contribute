@@ -2,13 +2,16 @@
  * The action creators in this file will modify all of the parts of the redux state
  * that are within state.results.
  */
+import Repo from '../models/Repo';
+
 export function updateResults(data) {
   const items = data.items;
   const results = {};
   const sortedIds = []
-  for (var i=0; i<items.length; i++) {
-    results[items[i].id] = items[i];
-    sortedIds.push(items[i].id);
+  for (let i=0; i<items.length; i++) {
+    let repo = new Repo(items[i]);
+    results[items[i].id] = repo;
+    sortedIds.push(repo.id);
   }
   return {
     type: "RESULTS_DATA_UPDATE",

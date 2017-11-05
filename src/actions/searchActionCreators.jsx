@@ -30,7 +30,9 @@ export function resetSearch() {
   return { type: 'RESET_SEARCH' }
 }
 
-export function getAdditionalInfo(id, repoName) {
+export function getAdditionalInfo(repo) {
+  const id = repo.id;
+  const repoName = repo.fullName;
   return function (dispatch) {
     dispatch(resultsActions.fetchingAddionalInfoStarted(id));
     setTimeout(() => {

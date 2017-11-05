@@ -21,7 +21,7 @@ export default class SearchResult extends React.Component {
      * state with the results. Then setting fetching to false.
      */
     if(!this.props.data.additionalInformation) {
-      this.props.getAdditionalInfo(this.props.data.id, this.props.data.full_name);
+      this.props.getAdditionalInfo(this.props.data);
     }
     this.setState({ open: !this.state.open });
   }
@@ -30,7 +30,7 @@ export default class SearchResult extends React.Component {
     return (
       <Row>
         <Panel>
-          <a href={this.props.data.html_url}><h3>{ this.props.data.full_name }</h3></a>
+          <a href={this.props.data.htmlUrl}><h3>{ this.props.data.fullName }</h3></a>
           <p><Emojify style={{height: 20, width: 20}}>{ this.props.data.description }</Emojify></p>
           <ResultStatsRow data={this.props.data} />
           <Row style={{marginRight: "5px"}}>
