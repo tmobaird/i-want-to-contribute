@@ -9,4 +9,8 @@ export default class Issue {
   constructor(properties: IssueProperties) {
     Object.assign(this, properties);
   }
+
+  static create(properties: IssueProperties): Issue {
+    return new Issue(properties);
+  }
 }

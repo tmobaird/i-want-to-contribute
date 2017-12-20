@@ -1,11 +1,14 @@
+// @flow
 import initialState from './initialState';
 import objectAssign from 'object-assign';
 import Repo from "../models/Repo";
+import AdditionalInformation from "../models/AdditionalInformation";
 
-export default function resultsReducer(state = initialState.results, action) {
+export default function resultsReducer(state: any = initialState.results, action: Object) {
   switch (action.type) {
     case "RESULT_CONTRIBUTING_UPDATE":
-      const updated = objectAssign({}, state.data, {[action.id]: result(state.data[action.id], action)});
+      const results = state.data;
+      const updated = objectAssign({}, results, {[action.id]: result(results[action.id], action)});
       return objectAssign({}, state, {data: updated});
     case "RESULT_FETCHING_ADDITIONAL_INFO_UPDATE":
     case "RESULT_OPEN_ISSUES_UPDATE":
@@ -21,13 +24,13 @@ export default function resultsReducer(state = initialState.results, action) {
   }
 }
 
-function result(state, action) {
+export function result(state: Repo, action: Object) {
   let props, issues;
 
   switch(action.type) {
     case "RESULT_CONTRIBUTING_UPDATE":
-      console.log('updating contributing');
-      return action.payload;
+      const additional = additionalInformation(state.additionalInformation, action);
+      return state.updateAndClone({ additionalInformation: additional });
     case "RESULT_OPEN_ISSUES_UPDATE":
       issues = Object.assign({}, state.additionalInformation, { openIssues: action.payload });
       props = Object.assign({}, state, { additionalInformation: issues });
@@ -46,14 +49,14 @@ function result(state, action) {
   }
 }
 
-function additionalInformation(state={}, action) {
+export function additionalInformation(state: AdditionalInformation, action: Object) {
   switch(action.type) {
     case "RESULT_CONTRIBUTING_UPDATE":
-      return objectAssign({}, state, { contributing: action.payload });
+      return state.updateAndClone({contributingInformation: action.payload});
     case "RESULT_OPEN_ISSUES_UPDATE":
-      return objectAssign({}, state, { openIssues: action.payload });
+      return state.updateAndClone({openIssues: action.payload});
     case "RESULT_SUGGESTED_ISSUES_UPDATE":
-      return objectAssign({}, state, { suggestedIssues: action.payload });
+      return state.updateAndClone({suggestedIssues: action.payload});
     default:
       return state;
   }

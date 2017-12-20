@@ -1,8 +1,9 @@
+// @flow
 import diff from 'jest-diff';
 
 // Custom Jest Expectations
 expect.extend({
-  toInclude(received, expected) {
+  toInclude(received: string, expected: string) {
     const pass = received.includes(expected);
 
     const message = pass

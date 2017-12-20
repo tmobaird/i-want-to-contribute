@@ -4,34 +4,34 @@ import {License} from '../serializers/RepoSerializer';
 import ContributingInformation from "./ContributingInformation";
 
 type RepoAttributes = {
-  contributorsUrl?: string,
-  createdAt?: string,
-  description?: string,
-  forks?: number,
-  forksCount?: number,
-  forksUrl?: string,
-  fullName?: string,
-  gitUrl?: string,
-  hasIssues?: boolean,
-  hasPages?: boolean,
-  homepage?: string,
-  htmlUrl?: string,
-  id?: number,
-  issuesUrl?: string,
-  language?: string,
-  license?: License,
-  name?: string,
-  openIssues?: number,
-  openIssuesCount?: number,
-  score?: number,
-  sshUrl?: string,
-  stargazersCount?: number,
-  updatedAt?: string,
-  url?: string,
-  watchers?: number,
-  watchersCount?: number,
-  additionalInformation?: AdditionalInformation,
-  contributingInformation?: ContributingInformation
+  contributorsUrl: string,
+  createdAt: string,
+  description: string,
+  forks: number,
+  forksCount: number,
+  forksUrl: string,
+  fullName: string,
+  gitUrl: string,
+  hasIssues: boolean,
+  hasPages: boolean,
+  homepage: string,
+  htmlUrl: string,
+  id: number,
+  issuesUrl: string,
+  language: string,
+  license: License,
+  name: string,
+  openIssues: number,
+  openIssuesCount: number,
+  score: number,
+  sshUrl: string,
+  stargazersCount: number,
+  updatedAt: string,
+  url: string,
+  watchers: number,
+  watchersCount: number,
+  additionalInformation: AdditionalInformation,
+  contributingInformation: ContributingInformation
 }
 
 export default class Repo {
@@ -64,16 +64,17 @@ export default class Repo {
   watchers: number;
   watchersCount: number;
 
-  constructor(data: RepoAttributes) {
+  constructor(data: $Shape<RepoAttributes>) {
     Object.assign(this, data);
   }
 
-  static create(data: RepoAttributes): Repo {
+  static create(data: $Shape<RepoAttributes>): Repo {
     return new Repo(data);
   }
 
-  update(data: RepoAttributes): Repo {
-    const params = Object.assign({}, {...this}, data);
+  update(data: $Shape<RepoAttributes>): Repo {
+    const { update, ...props } = this;
+    const params = Object.assign({}, {...props}, data);
     return new Repo(params);
   }
 }

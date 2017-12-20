@@ -2,26 +2,21 @@
 import Repo from './Repo';
 
 describe('Repo', () => {
+  const baseAttrs = {
+    id: 123,
+    fullName: 'facebook/react',
+    name: 'react',
+    language: 'JavaScript'
+  };
+
   it('is new-able', () => {
-    const subject = new Repo({
-      thomas: 'test',
-      id: 123,
-      fullName: 'facebook/react',
-      name: 'react',
-      language: 'JavaScript'
-    });
+    const subject = new Repo(baseAttrs);
     expect(subject.fullName).toEqual('facebook/react')
   });
 
   describe('create', () => {
     it('creates a new Repo', () => {
-      const subject = Repo.create({
-        id: 123,
-        fullName: 'facebook/react',
-        name: 'react',
-        language: 'JavaScript'
-      });
-
+      const subject = Repo.create(baseAttrs);
       expect(subject instanceof Repo).toBeTruthy();
     });
   });
