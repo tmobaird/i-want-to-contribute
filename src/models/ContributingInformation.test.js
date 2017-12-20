@@ -1,19 +1,31 @@
+// @flow
 import ContributingInformation from "./ContributingInformation";
 
 describe('ContributingInformation', () => {
   let subject;
 
   beforeEach(() => {
-    subject = new ContributingInformation({content: 'IyB0aGlzIGlzIGEgdGVzdA=='});
+    subject = new ContributingInformation({name: 'README', content: 'IyB0aGlzIGlzIGEgdGVzdA=='});
   });
 
   describe('constructor', () => {
-    it('creates a new ContributingInormation object', () => {
+    it('creates a new ContributingInformation object', () => {
       subject = new ContributingInformation({name: 'TEST', htmlUrl: 'https://test.com', content: 'IyB0aGlzIGlzIGEgdGVzdA=='});
       expect(subject.name).toEqual('TEST');
       expect(subject.htmlUrl).toEqual('https://test.com');
       expect(subject.content).toEqual('IyB0aGlzIGlzIGEgdGVzdA==');
     });
+  });
+
+  describe('create', () => {
+    it('returns a new ContributingInformation', () => {
+      const subject = ContributingInformation.create({name: 'TEST', htmlUrl: 'https://test.com', content: 'IyB0aGlzIGlzIGEgdGVzdA=='})
+      expect(subject instanceof ContributingInformation).toBeTruthy();
+    });
+  });
+
+  describe('update', () => {
+
   });
 
   describe('decodedContent', () => {

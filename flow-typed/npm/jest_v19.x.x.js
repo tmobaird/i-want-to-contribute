@@ -229,7 +229,11 @@ type JestExpectType = {
    * Use .toThrowErrorMatchingSnapshot to test that a function throws a error
    * matching the most recent snapshot when it is called.
    */
-  toThrowErrorMatchingSnapshot(): void
+  toThrowErrorMatchingSnapshot(): void,
+  /**
+   * CUSTOM MATCHER TYPES
+   */
+  toInclude(value: string): void
 };
 
 type JestObjectType = {

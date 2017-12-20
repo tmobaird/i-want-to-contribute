@@ -2,7 +2,7 @@
 import Remarkable from 'remarkable';
 import {Base64} from "js-base64";
 
-interface ContributingInformationParams {
+type ContributingInformationParams = {
   name: string,
   htmlUrl: string,
   content: string
@@ -15,6 +15,10 @@ export default class ContributingInformation {
 
   constructor(parameters: ContributingInformationParams): void {
     Object.assign(this, parameters)
+  }
+
+  static create(parameters: $Shape<ContributingInformation>): ContributingInformation {
+    return new ContributingInformation(parameters);
   }
 
   decodedContent(): string {
