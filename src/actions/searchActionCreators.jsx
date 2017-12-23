@@ -42,8 +42,8 @@ export function getAdditionalInfo(repo: Repo) {
         getContributing(repoName)
           .then((response) => {
             const {content, html_url, name} = response.data;
-            repo.contributingInformation = new ContributingInformation({htmlUrl: html_url, name, content});
-            dispatch(resultsActions.updateResultContributing(repo));
+            const updatedContributing = new ContributingInformation({htmlUrl: html_url, name, content});
+            dispatch(resultsActions.updateResultContributing(id, updatedContributing));
           })
           .catch((err) => dispatch(resultsActions.updateResultContributing(id, err.response.data))),
         getOpenIssues(repoName)
@@ -56,7 +56,7 @@ export function getAdditionalInfo(repo: Repo) {
       });
     }, 1000);
   };
-};
+}
 
 function updateSubmitted() {
   return {

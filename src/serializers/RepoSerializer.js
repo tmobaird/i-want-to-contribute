@@ -6,7 +6,7 @@ export interface License {
   url: string
 }
 
-interface UnserializedRepoAttributes {
+export interface UnserializedRepoAttributes {
   contributors_url: string;
   created_at: string;
   description: string;
