@@ -4,14 +4,15 @@
  */
 import Repo from '../models/Repo';
 import RepoSerializer from '../serializers/RepoSerializer';
+import ContributingInformation from "../models/ContributingInformation";
 
 export function updateResults(data) {
   const items = data.items;
   const results = {};
-  const sortedIds = []
+  const sortedIds = [];
   for (let i=0; i<items.length; i++) {
     const params = RepoSerializer.deserialize(items[i]);
-    const repo = new Repo(params);
+    const repo = Repo.create(params);
     results[items[i].id] = repo;
     sortedIds.push(repo.id);
   }
@@ -26,16 +27,16 @@ export function updateResults(data) {
 
 export function updateOpenIssues(id, data) {
   return function (dispatch) {
-    dispatch(updateResultOpenIssues(id, data.openIssues))
-    dispatch(updateResultSuggestedIssues(id, data.suggestedIssues))
+    dispatch(updateResultOpenIssues(id, data.openIssues));
+    dispatch(updateResultSuggestedIssues(id, data.suggestedIssues));
   }
 }
 
-export function updateResultContributing(repo: Repo) {
+export function updateResultContributing(id: number, data: ContributingInformation) {
   return {
     type: "RESULT_CONTRIBUTING_UPDATE",
-    id: repo.id,
-    payload: repo
+    id: id,
+    payload: data
   }
 }
 

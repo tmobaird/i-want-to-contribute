@@ -1,12 +1,12 @@
 // @flow
 import AdditionalInformation from './AdditionalInformation';
 import {License} from '../serializers/RepoSerializer';
-import ContributingInformation from "./ContributingInformation";
 
 type RepoAttributes = {
   contributorsUrl: string,
   createdAt: string,
   description: string,
+  fetchingAdditional: boolean,
   forks: number,
   forksCount: number,
   forksUrl: string,
@@ -31,15 +31,14 @@ type RepoAttributes = {
   watchers: number,
   watchersCount: number,
   additionalInformation: AdditionalInformation,
-  contributingInformation: ContributingInformation
 }
 
 export default class Repo {
-  additionalInformation: AdditionalInformation;
+  additionalInformation: AdditionalInformation = AdditionalInformation.empty();
   contributorsUrl: string;
-  contributingInformation: ContributingInformation;
   createdAt: string;
   description: string;
+  fetchingAdditional: boolean;
   forks: number;
   forksCount: number;
   forksUrl: string;
@@ -72,9 +71,13 @@ export default class Repo {
     return new Repo(data);
   }
 
-  update(data: $Shape<RepoAttributes>): Repo {
-    const { update, ...props } = this;
-    const params = Object.assign({}, {...props}, data);
-    return new Repo(params);
+  updateAndClone(data: $Shape<RepoAttributes>): Repo {
+    const params = Object.assign({}, this.properties(), data);
+    return Repo.create(params);
+  }
+
+  properties(): RepoAttributes {
+    const { updateAndClone, properties, ...rest } = this;
+    return rest;
   }
 }

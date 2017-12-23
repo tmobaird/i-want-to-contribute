@@ -13,10 +13,10 @@ export default class AdditionalInformationBox extends React.Component {
           <Loader color="#4BCEFF" size="70px" />
         </Col>
       );
-    } else if(this.props.data.contributing && this.props.data.additionalInformation) {
+    } else if(!this.props.data.isEmpty()) {
       return (
         <div>
-          <ContributingInformationRow data={this.props.data.contributing} />
+          <ContributingInformationRow data={this.props.data.contributingInformation} />
           <hr style={{width: "90%"}} />
           <OpenIssuesRow
             openIssues={this.props.data.openIssues}

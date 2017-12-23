@@ -29,10 +29,29 @@ describe('AdditionalInformation', () => {
       const issue = Issue.create({title: 'Open Issue'});
       const subject = initial.updateAndClone({openIssues: [issue]});
 
-      expect(subject instanceof AdditionalInformation).toBeTruthy();
+      expect(subject).toBeInstanceOf(AdditionalInformation);
       expect(subject).not.toBe(initial);
       expect(subject.openIssues).toEqual([issue]);
       expect(subject.suggestedIssues).toEqual([]);
+    });
+  });
+  describe('empty', () => {
+    it('returns a new AdditionalInformation with no properties', () => {
+      const subject = AdditionalInformation.empty();
+      expect(subject).toBeInstanceOf(AdditionalInformation);
+      expect(subject).toEqual({});
+    });
+  });
+
+  describe('isEmpty', () => {
+    it('returns true', () => {
+      const subject = AdditionalInformation.empty();
+      expect(subject.isEmpty()).toBeTruthy();
+    });
+
+    it('returns false', () => {
+      const subject = AdditionalInformation.create({openIssues: []});
+      expect(subject.isEmpty()).toBeFalsy();
     });
   });
 });

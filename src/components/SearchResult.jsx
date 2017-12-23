@@ -25,7 +25,7 @@ export default class SearchResult extends React.Component<Props> {
      * then the request will actually be made, followed by setting the redux
      * state with the results. Then setting fetching to false.
      */
-    if(!this.props.data.additionalInformation) {
+    if(this.props.data.additionalInformation.isEmpty()) {
       this.props.getAdditionalInfo(this.props.data);
     }
     this.setState({ open: !this.state.open });
@@ -46,7 +46,7 @@ export default class SearchResult extends React.Component<Props> {
           <Collapse in={this.state.open}>
             <div>
               <hr style={{ width: "90%"}} />
-              <AdditionalInformationBox fetching={repo.fetchingAdditional} data={{contributing: repo.contributingInformation, additionalInformation: repo.additionalInformation}} />
+              <AdditionalInformationBox fetching={repo.fetchingAdditional} data={repo.additionalInformation} />
             </div>
           </Collapse>
         </Panel>
