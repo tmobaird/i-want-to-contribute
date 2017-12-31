@@ -35,7 +35,7 @@ export function updateOpenIssues(id, data) {
 export function updateResultContributing(id: number, data: ContributingInformation) {
   return {
     type: "RESULT_CONTRIBUTING_UPDATE",
-    id: id,
+    id,
     payload: data
   }
 }
@@ -70,17 +70,17 @@ export function fetchingFinished() {
   }
 }
 
-export function fetchingAddionalInfoStarted(id) {
+export function fetchingAdditionalInfoStarted(id) {
   return {
-    type: "RESULT_FETCHING_ADDITIONAL_INFO_UPDATE",
+    type: "RESULT_FETCHING_ADDITIONAL_UPDATE",
     id,
     payload: true
   }
 }
 
-export function fetchingAddionalInfoFinished(id) {
+export function fetchingAdditionalInfoFinished(id) {
   return {
-    type: "RESULT_FETCHING_ADDITIONAL_INFO_UPDATE",
+    type: "RESULT_FETCHING_ADDITIONAL_UPDATE",
     id,
     payload: false
   }

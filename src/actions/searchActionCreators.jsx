@@ -36,13 +36,13 @@ export function getAdditionalInfo(repo: Repo) {
   const id = repo.id;
   const repoName = repo.fullName;
   return function (dispatch) {
-    dispatch(resultsActions.fetchingAddionalInfoStarted(id));
+    dispatch(resultsActions.fetchingAdditionalInfoStarted(id));
     setTimeout(() => {
       Promise.all([
         getContributing(repoName)
           .then((response) => {
             const {content, html_url, name} = response.data;
-            const updatedContributing = new ContributingInformation({htmlUrl: html_url, name, content});
+            const updatedContributing = ContributingInformation.create({htmlUrl: html_url, name, content});
             dispatch(resultsActions.updateResultContributing(id, updatedContributing));
           })
           .catch((err) => dispatch(resultsActions.updateResultContributing(id, err.response.data))),
@@ -52,7 +52,7 @@ export function getAdditionalInfo(repo: Repo) {
           .catch((err, res) => { console.log(err) }) // Need to do something with these issues
       ]) // This will return a Promise, when the two promises inside this complete. This is used to set fetchingAdditionalInfo to false after both
       .then(responses => {
-        dispatch(resultsActions.fetchingAddionalInfoFinished(id));
+        dispatch(resultsActions.fetchingAdditionalInfoFinished(id));
       });
     }, 1000);
   };

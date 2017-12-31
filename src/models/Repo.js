@@ -38,7 +38,7 @@ export default class Repo {
   contributorsUrl: string;
   createdAt: string;
   description: string;
-  fetchingAdditional: boolean;
+  fetchingAdditional: boolean = false;
   forks: number;
   forksCount: number;
   forksUrl: string;

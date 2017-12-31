@@ -8,12 +8,8 @@ module.exports = function(app){
   app.get('/search', function (req, res) {
     const searchTerm = req.query.q;
     if(searchTerm) {
-      console.log(`Searching for: ${searchTerm}`)
       githubHelpers.searchGithub(searchTerm)
-        .then((response) => {
-          console.log(response.data.items);
-          return res.send(response.data);
-        });
+        .then((response) => res.send(response.data));
     } else {
       res.send("Request must include query param.")
     }
@@ -21,10 +17,7 @@ module.exports = function(app){
 
   app.get('/contributing/:repoName', function (req, res) {
     githubHelpers.getContributing(`${req.params.repoName}`)
-      .then((response) => {
-        console.log(response.data);
-        return res.send(response.data)
-      })
+      .then((response) => res.send(response.data))
       .catch((err) => {
         res.status(err.response.status)
           .send(err.response.data);
@@ -33,10 +26,7 @@ module.exports = function(app){
 
   app.get('/open_issues/:repoName', function (req, res) {
     githubHelpers.getOpenIssues(`${req.params.repoName}`)
-      .then((response) => {
-        //console.log(response.data);
-        return res.send(response.data)
-      })
+      .then((response) => res.send(response.data))
       .catch((err) => {
         res.status(err.response.status)
           .send(err.response.data)

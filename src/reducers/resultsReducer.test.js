@@ -223,7 +223,7 @@ describe('results', () => {
       });
     });
 
-    describe('when action type is RESULT_FETCHING_ADDITIONAL_INFO_UPDATE', () => {
+    describe('when action type is RESULT_FETCHING_ADDITIONAL_UPDATE', () => {
       it('updates repo with fetching additional == true', () => {
         const initial = Repo.create({});
         const action = {
