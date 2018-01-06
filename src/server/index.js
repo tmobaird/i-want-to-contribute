@@ -1,10 +1,12 @@
-require('dotenv').config();
-const colors = require('colors');
+import dotenv from 'dotenv';
+dotenv.config();
+
+import colors from 'colors';
 colors.enabled = true; // enables colors so they show in foreman console
 
-const app = require('./app');
+import App from './app';
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, function () {
+App.listen(PORT, () => {
   console.log(`Running on port ${PORT}`.green)
-})
+});
