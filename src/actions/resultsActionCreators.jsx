@@ -2,13 +2,19 @@
  * The action creators in this file will modify all of the parts of the redux state
  * that are within state.results.
  */
+import Repo from '../models/Repo';
+import RepoSerializer from '../serializers/RepoSerializer';
+import ContributingInformation from "../models/ContributingInformation";
+
 export function updateResults(data) {
   const items = data.items;
   const results = {};
-  const sortedIds = []
-  for (var i=0; i<items.length; i++) {
-    results[items[i].id] = items[i];
-    sortedIds.push(items[i].id);
+  const sortedIds = [];
+  for (let i=0; i<items.length; i++) {
+    const params = RepoSerializer.deserialize(items[i]);
+    const repo = Repo.create(params);
+    results[items[i].id] = repo;
+    sortedIds.push(repo.id);
   }
   return {
     type: "RESULTS_DATA_UPDATE",
@@ -21,12 +27,12 @@ export function updateResults(data) {
 
 export function updateOpenIssues(id, data) {
   return function (dispatch) {
-    dispatch(updateResultOpenIssues(id, data.openIssues))
-    dispatch(updateResultSuggestedIssues(id, data.suggestedIssues))
+    dispatch(updateResultOpenIssues(id, data.openIssues));
+    dispatch(updateResultSuggestedIssues(id, data.suggestedIssues));
   }
 }
 
-export function updateResultContributing(id, data) {
+export function updateResultContributing(id: number, data: ContributingInformation) {
   return {
     type: "RESULT_CONTRIBUTING_UPDATE",
     id,
@@ -64,17 +70,17 @@ export function fetchingFinished() {
   }
 }
 
-export function fetchingAddionalInfoStarted(id) {
+export function fetchingAdditionalInfoStarted(id) {
   return {
-    type: "RESULT_FETCHING_ADDITIONAL_INFO_UPDATE",
+    type: "RESULT_FETCHING_ADDITIONAL_UPDATE",
     id,
     payload: true
   }
 }
 
-export function fetchingAddionalInfoFinished(id) {
+export function fetchingAdditionalInfoFinished(id) {
   return {
-    type: "RESULT_FETCHING_ADDITIONAL_INFO_UPDATE",
+    type: "RESULT_FETCHING_ADDITIONAL_UPDATE",
     id,
     payload: false
   }

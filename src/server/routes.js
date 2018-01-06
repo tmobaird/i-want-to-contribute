@@ -8,7 +8,6 @@ module.exports = function(app){
   app.get('/search', function (req, res) {
     const searchTerm = req.query.q;
     if(searchTerm) {
-      console.log(`Searching for: ${searchTerm}`)
       githubHelpers.searchGithub(searchTerm)
         .then((response) => res.send(response.data));
     } else {
@@ -33,4 +32,4 @@ module.exports = function(app){
           .send(err.response.data)
       });
   });
-}
+};

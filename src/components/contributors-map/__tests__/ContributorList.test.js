@@ -14,6 +14,7 @@ describe('ContributorList', () => {
         expect(wrapper.find("Contributor")).toHaveLength(0);
       });
     });
+
     describe('when one contributor exists', () => {
       const contributors = [
         { "name": "Thomas Baird", "username": "tmobaird" }
