@@ -67,6 +67,18 @@
           "username": "Ricardo-Silva91"
         }
       ]
+    },
+    {
+      "name": "Vermont",
+      "emoji": "maple_leaf",
+      "latitude": 44.2625,
+      "longitude": -72.5805,
+      "contributors": [
+        {
+          "name": "Kyle Beaulieu",
+          "username": "kbeaulieu802"
+        }
+      ]
     }
   ]
 }
