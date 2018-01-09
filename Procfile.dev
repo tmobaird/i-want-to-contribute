@@ -1,2 +1,2 @@
-express: node src/server
+express: yarn run start-backend
 web: yarn run start-ui

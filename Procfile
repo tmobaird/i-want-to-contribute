@@ -1,1 +1,1 @@
-web: node src/server
+web: yarn run build-backend && yarn run serve-backend
