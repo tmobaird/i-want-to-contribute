@@ -6,11 +6,12 @@ import SearchPage from './containers/SearchPage';
 import AboutPage from './components/AboutPage';
 import ContributorsPage from './components/ContributorsPage';
 import NotFoundPage from './components/NotFoundPage';
+import { getStatus } from "./utils/apiQueryHelper";
 
 const Routes = () => {
   return(
     <BrowserRouter>
-        <App>
+        <App fetchStatus={getStatus}>
           <Switch>
             <Route exact path="/" component={SearchPage}/>
             <Route path="/about" component={AboutPage}/>
