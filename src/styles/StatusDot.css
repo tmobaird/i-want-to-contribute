@@ -1,0 +1,6 @@
+.status-dot {
+    border-radius: 50%;
+    width: 9px;
+    height: 9px;
+    display: inline-block;
+}

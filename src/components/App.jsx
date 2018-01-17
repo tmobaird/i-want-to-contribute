@@ -11,22 +11,21 @@ interface Props {
 }
 
 interface State {
-  backendStatus?: boolean
+  backendStatus: number
 }
 
 class App extends React.Component<Props, State> {
-  // Change this code and push into redux state
   constructor(props: Props) {
     super(props);
-    this.state = {};
+    this.state = { backendStatus: 0 };
   }
   async componentDidMount() {
     // Not a huge fan of try/catches with async await, but we'll see
     try {
       await this.props.fetchStatus();
-      this.setState({ backendStatus: true });
+      this.setState({ backendStatus: 1 });
     } catch (error) {
-      this.setState({ backendStatus: false })
+      this.setState({ backendStatus: -1 })
     }
   }
 
@@ -34,7 +33,7 @@ class App extends React.Component<Props, State> {
     return (
       <div className="App">
         <StatusFavicon status={this.state.backendStatus} />
-        <NavigationBar />
+        <NavigationBar status={this.state.backendStatus} />
         <div className="container">
           {this.props.children}
         </div>

@@ -4,8 +4,7 @@ import App from './App';
 import { MemoryRouter } from 'react-router-dom';
 import {mount, shallow} from 'enzyme';
 import * as sinon from 'sinon';
-
-const noop = () => Promise.resolve(true);
+import {noop} from "../utils/noop";
 
 describe('App', () => {
   it('renders without crashing', () => {
@@ -41,7 +40,7 @@ describe('App', () => {
       const subject = shallow(<App fetchStatus={stub}/>);
       await subject.instance().componentDidMount();
 
-      expect(subject.state().backendStatus).toBeFalsy();
+      expect(subject.state().backendStatus).toEqual(-1);
     });
   });
 });
