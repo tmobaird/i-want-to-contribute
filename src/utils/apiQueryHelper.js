@@ -1,18 +1,22 @@
 import axios from 'axios';
 
 const apiUrl = () => {
-  if(process.env.REACT_APP_BUNDLED_DEPLOY === 'true') {
+  if (process.env.REACT_APP_BUNDLED_DEPLOY === 'true') {
     return ""; // Uses relative path since client is being served from express server
-  } else if(process.env.REACT_APP_EXPRESS_URL) {
+  } else if (process.env.REACT_APP_EXPRESS_URL) {
     return process.env.REACT_APP_EXPRESS_URL; // Manually overridden URL
   } else {
     return "http://localhost:5000"; // Default URL for dev
   }
-}
+};
 
 const expressAxios = axios.create({
   baseURL: apiUrl()
 });
+
+export const getStatus = () => {
+  return expressAxios.get('/status');
+};
 
 export function searchGithub(searchTerm) {
   // These urls need encoded in the event they include special characters

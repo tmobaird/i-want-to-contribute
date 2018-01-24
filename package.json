@@ -26,6 +26,7 @@
     "react-bootstrap": "0.30.8",
     "react-dom": "15.4.2",
     "react-emojione": "^3.1.7",
+    "react-favicon": "^0.0.11",
     "react-leaflet": "^1.1.6",
     "react-redux": "5.0.1",
     "react-router-dom": "^4.1.1",
